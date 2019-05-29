@@ -6,13 +6,15 @@ const SplashNav = (props) => {
   
         return (
            
-                <div className="splashnav">
-                    <ul>
-                    <li><h1>Luhu</h1></li>
-                    <li><Link to='/splash/signup'>START YOUR FREE TRIAL</Link></li>
-                    <li><Link to='/splash/login'>Log In</Link></li>
-                    </ul>
-                </div>
+        <div className="splashnav">
+                <ul>
+                        <h1>Luhu</h1>
+                </ul>
+                <ul className="splashclick">
+                        <li><Link className="splashsignup" to='/splash/signup'>START YOUR FREE TRIAL</Link></li>
+                        <li><Link className="headerlink" to='/splash/login'>Log In</Link></li>
+                </ul>
+        </div>
           
         );
 
