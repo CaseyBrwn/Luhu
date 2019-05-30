@@ -20,25 +20,24 @@ class SessionForm extends React.Component{
     }
 
     clickHandler(){
-        this.props.loginUser().then(dispatch(this.props.closeModal()));
+        this.props.loginUser().then(() => dispatch(this.props.closeModal()));
     }
 
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.processForm(this.state).then(dispatch(this.props.closeModal()));
-        this.setState({
-            username: '',
-            password: ''
-        });
+        this.props.processForm(this.state).then(()=>dispatch(this.props.closeModal()))
+    
+
+    }
+
+    componentDidMount(){
+        this.props.clearErrors();
     }
 
 
     render(){
-let button = null;
-
-
-
+    let button = null;
 
         if (this.props.formType === 'Signup'){
             button = <div className="switchButtonContainer"><div>Already have an account?</div><button className="switchButton" onClick={this.props.otherForm}>Log in</button></div>
@@ -54,6 +53,11 @@ let button = null;
         if (this.state.password.length !== 0) {
             inputpasswordclass = "inputBox2"
         }
+        let errors = <div className="formErrors"></div>
+        if(this.props.errors.length !== 0){
+            errors = <div className="formErrors">{this.props.errors[0]}</div>
+        }
+       
 
 
         return(
@@ -68,12 +72,15 @@ let button = null;
                             <button className='demo' onClick={this.clickHandler}>CONTINUE WITH DEMO</button>
                         </li>
                         <li className='emailbox'>
-                            <label className='sessionlabel'>EMAIL</label>
-                            <input type="text" className={inputboxclass} placeholder="EMAIL" onChange={this.handleChange("username")} value={this.state.username} /> 
+                            <label className='sessionlabel'>USERNAME</label>
+                            <input type="text" className={inputboxclass} placeholder="USERNAME" onChange={this.handleChange("username")} value={this.state.username} /> 
                         </li>
                         <li>
                             <label className="sessionlabel">PASSWORD</label>
                             <input type="password" className={inputpasswordclass} placeholder="PASSWORD" onChange={this.handleChange("password")} value={this.state.password} /> 
+                        </li>
+                        <li>
+                            {errors}
                         </li>
                         <li>
                             <input type="submit" className="sessionSubmit" value={this.props.formType} />

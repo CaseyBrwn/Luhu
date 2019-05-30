@@ -40,7 +40,7 @@ class SplashNav extends React.Component {
         render(){
                 return (
 
-                        <div className={this.state.navClass} onScroll={this.scrollHandler} >
+                        <div className={this.state.navClass}  >
                                 <ul>
                                         <h1>luhu</h1>
                                 </ul>
