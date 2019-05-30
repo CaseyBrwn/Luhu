@@ -3,7 +3,7 @@
     "node": "8.4.0",
     "npm": "6.1.0"
   },
-  "name": "BenchBnB",
+  "name": "Luhu",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.4.5",
@@ -35,13 +35,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CaseyBrwn/BenchBNB.git"
+    "url": "git+https://github.com/CaseyBrwn/Luhu.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CaseyBrwn/BenchBNB/issues"
+    "url": "https://github.com/CaseyBrwn/Luhu/issues"
   },
-  "homepage": "https://github.com/CaseyBrwn/BenchBNB#readme"
+  "homepage": "https://github.com/CaseyBrwn/Luhu#readme"
 }

@@ -10,6 +10,7 @@ class SessionForm extends React.Component{
             password: '',
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.clickHandler = this.clickHandler.bind(this);
     }
 
     handleChange(type){
@@ -18,37 +19,77 @@ class SessionForm extends React.Component{
         };
     }
 
+    clickHandler(){
+        this.props.loginUser().then(() => dispatch(this.props.closeModal()));
+    }
+
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.processForm(this.state);
-        this.setState({
-            username: '',
-            password: ''
-        });
+        this.props.processForm(this.state).then(()=>dispatch(this.props.closeModal()))
+    
+
+    }
+
+    componentDidMount(){
+        this.props.clearErrors();
     }
 
 
     render(){
-let link = null;
-        if (this.props.formType === 'signup'){
-             link = <Link to='/login'>Already have an account? Loggin Here</Link>
+    let button = null;
+
+        if (this.props.formType === 'Signup'){
+            button = <div className="switchButtonContainer"><div>Already have an account?</div><button className="switchButton" onClick={this.props.otherForm}>Log in</button></div>
         }else{
-             link = <Link to='/signup'>Dont have an account? Sign Up Here</Link>
+            button = <div className="switchButtonContainer"><div>Dont have an account?</div><button className="switchButton" onClick={this.props.otherForm}>Start your free trial</button></div> 
         }
-    
+    let inputboxclass = "inputBox";
+        if(this.state.username.length !== 0){
+            inputboxclass= "inputBox2"
+        }
+
+        let inputpasswordclass = "inputBox";
+        if (this.state.password.length !== 0) {
+            inputpasswordclass = "inputBox2"
+        }
+        let errors = <div className="formErrors"></div>
+        if(this.props.errors.length !== 0){
+            errors = <div className="formErrors">{this.props.errors[0]}</div>
+        }
+       
+
+
         return(
-            <>
-            <h3>{this.props.formType}</h3>
-            <form onSubmit={this.handleSubmit}>
-                <label>Username</label>
-                <input type="text" onChange={this.handleChange("username")} value={this.state.username} /> 
-                <label>Password</label>
-                <input type="password" onChange={this.handleChange("password")} value={this.state.password} /> 
-                <input type="submit" value={this.props.formType}/>
-            </form>
-            {link}
-            </>
+            <div className="sessionform"> 
+            <button className="closeButton" onClick={this.props.closeModal}>X</button>
+                <form onSubmit={this.handleSubmit}>
+                    <ul>
+                        <li>
+                            <h3>{this.props.formType} to LUHU</h3>
+                        </li>
+                        <li>
+                            <button className='demo' onClick={this.clickHandler}>CONTINUE WITH DEMO</button>
+                        </li>
+                        <li className='emailbox'>
+                            <label className='sessionlabel'>USERNAME</label>
+                            <input type="text" className={inputboxclass} placeholder="USERNAME" onChange={this.handleChange("username")} value={this.state.username} /> 
+                        </li>
+                        <li>
+                            <label className="sessionlabel">PASSWORD</label>
+                            <input type="password" className={inputpasswordclass} placeholder="PASSWORD" onChange={this.handleChange("password")} value={this.state.password} /> 
+                        </li>
+                        <li>
+                            {errors}
+                        </li>
+                        <li>
+                            <input type="submit" className="sessionSubmit" value={this.props.formType} />
+                        </li>
+
+                    </ul>
+                </form>
+                {button}
+            </div> 
         );
     }
 }

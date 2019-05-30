@@ -7,7 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Bench.create(description: "Old splintery bench in the mission", lat: 37.767484, lng: -122.426007)
-Bench.create(description: "Nice Platstic Bench", lat: 37.767684, lng: -122.425007)
-Bench.create(description: "Cement Bench", lat: 37.767484, lng: -122.428007)
-Bench.create(description: "BenchyMcBenchFace is your friend", lat: 37.767484, lng: -122.429007)
+User.create(username: "admin", password: "password")
