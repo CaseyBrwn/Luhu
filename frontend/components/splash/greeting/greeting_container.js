@@ -1,6 +1,7 @@
 import Greeting from './greeting';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../../actions/session_actions';
+import {openModal} from '../../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   
@@ -15,7 +16,9 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
 
     return({
-        logoutUser: () => dispatch(logoutUser())
+        logoutUser: () => dispatch(logoutUser()),
+        openModal: (model) => dispatch(openModal(model))
+
     });
 
 };

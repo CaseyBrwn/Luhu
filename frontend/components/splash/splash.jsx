@@ -4,6 +4,8 @@ import SignupFormContainer from "./Form/signup_form_container";
 import SplashNav from "./greeting/greeting_container";
 import {AuthRoute} from '../../util/rout_util';
 import { Link } from 'react-router-dom';
+import {connect} from 'react-redux';
+import {openModal} from '../../actions/modal_actions';
 
 class Splash extends React.Component{
     constructor(props){
@@ -12,8 +14,6 @@ class Splash extends React.Component{
             scroll: false
         };
     }
-
-
 
     render(){
 
@@ -30,7 +30,7 @@ class Splash extends React.Component{
                         <li><h1>All Your TV In One Place</h1></li>
                         <li className="splashtextWatch">Watch thousands of shows and movies, with plans starting at $5.99/month</li>
                     <li className="splashnetworks"> HBQ, SHOWMIME, CIMENAX, and STARS availible as add-ons.</li>
-                        <li><Link className="splashlink" to='/splash/signup'>START YOUR FREE TRIAL</Link></li>
+                        <li><button className="splashlink" onClick={this.props}>START YOUR FREE TRIAL</button></li>
                         <li className="splashfree">Free trial availbile for new and eligbile returning subscribers only.</li>
                     </ul>
                   
@@ -43,4 +43,12 @@ class Splash extends React.Component{
 
 }
 
-export default Splash; 
+
+const mdp = (dispatch) => {
+
+    return({
+        openModel: () => dispatch(openModal('signup'))
+    })
+}
+
+export default connect(null, mdp)(Splash)

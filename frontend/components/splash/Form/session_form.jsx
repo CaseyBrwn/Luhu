@@ -10,6 +10,7 @@ class SessionForm extends React.Component{
             password: '',
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.clickHandler = this.clickHandler.bind(this);
     }
 
     handleChange(type){
@@ -18,10 +19,14 @@ class SessionForm extends React.Component{
         };
     }
 
+    clickHandler(){
+        this.props.loginUser().then(dispatch(this.props.closeModal()));
+    }
+
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.processForm(this.state);
+        this.props.processForm(this.state).then(dispatch(this.props.closeModal()));
         this.setState({
             username: '',
             password: ''
@@ -30,25 +35,41 @@ class SessionForm extends React.Component{
 
 
     render(){
-let link = null;
-        if (this.props.formType === 'signup'){
-             link = <Link to='/login'>Already have an account? Loggin Here</Link>
+let button = null;
+
+
+        if (this.props.formType === 'Signup'){
+            button = <div className="switchButtonContainer"><div>Already have an account?</div><button className="switchButton" onClick={this.props.otherForm}>Log in</button></div>
         }else{
-             link = <Link to='/signup'>Dont have an account? Sign Up Here</Link>
+            button = <div className="switchButtonContainer"><div>Dont have an account?</div><button className="switchButton" onClick={this.props.otherForm}>Start your free trial</button></div> 
         }
-    
         return(
-            <>
-            <h3>{this.props.formType}</h3>
-            <form onSubmit={this.handleSubmit}>
-                <label>Username</label>
-                <input type="text" onChange={this.handleChange("username")} value={this.state.username} /> 
-                <label>Password</label>
-                <input type="password" onChange={this.handleChange("password")} value={this.state.password} /> 
-                <input type="submit" value={this.props.formType}/>
-            </form>
-            {link}
-            </>
+            <div className="sessionform"> 
+            <button className="closeButton" onClick={this.props.closeModal}>X</button>
+                <form onSubmit={this.handleSubmit}>
+                    <ul>
+                        <li>
+                            <h3>{this.props.formType} to HULU</h3>
+                        </li>
+                        <li>
+                            <button className='demo' onClick={this.clickHandler}>Demo Login</button>
+                        </li>
+                        <li className='emailbox'>
+                            <label className='sessionlabel'>EMAIL</label>
+                            <input type="text" className="inputBox" onChange={this.handleChange("username")} value={this.state.username} /> 
+                        </li>
+                        <li>
+                            <label className="sessionlabel">PASSWORD</label>
+                            <input type="password" className="inputBox" onChange={this.handleChange("password")} value={this.state.password} /> 
+                        </li>
+                        <li>
+                            <input type="submit" className="sessionSubmit" value={this.props.formType} />
+                        </li>
+
+                    </ul>
+                </form>
+                {button}
+            </div> 
         );
     }
 }

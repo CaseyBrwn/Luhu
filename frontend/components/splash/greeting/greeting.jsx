@@ -12,6 +12,7 @@ class SplashNav extends React.Component {
                         loginClass: "splashlogin"
                 };
                 this.scrollHandler = this.scrollHandler.bind(this);
+                this.onClickHandler = this.onClickHandler.bind(this);
 
         }
 
@@ -24,8 +25,16 @@ class SplashNav extends React.Component {
         }
 
         scrollHandler() {
-                
+                let pos = window.pageYOffset;
+                if (pos === 0){
+                this.setState({ navClass: "splashnav", signupClass: "splashsignup", loginClass: "splashlogin"});
+                }else{
                 this.setState({ navClass: "splashnavscroll", signupClass: "splashsignupscroll", loginClass: "splashloginscroll" });
+                }
+        }
+
+        onClickHandler(e){
+                this.props.openModal(e.target.value);
         }
 
         render(){
@@ -33,11 +42,11 @@ class SplashNav extends React.Component {
 
                         <div className={this.state.navClass} onScroll={this.scrollHandler} >
                                 <ul>
-                                        <h1>Luhu</h1>
+                                        <h1>luhu</h1>
                                 </ul>
                                 <ul className="splashclick">
-                                        <li><Link className={this.state.signupClass} to='/splash/signup'>START YOUR FREE TRIAL</Link></li>
-                                        <li><Link className={this.state.loginClass} to='/splash/login'>Log In</Link></li>
+                                        <li><button className={this.state.signupClass} value="signup" onClick={this.onClickHandler}>START YOUR FREE TRIAL</button></li>
+                                        <li><button className={this.state.loginClass} value="login" onClick={this.onClickHandler}>LOG IN</button></li>
                                 </ul>
                         </div>
 

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 import {signupUser} from './actions/session_actions';
+import {logoutUser} from './actions/session_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //Test Started
-
+    window.logoutUser = logoutUser;
     window.getState = store.getState;
     window.dispatch = store.dispatch;
     window.signupUser = signupUser;

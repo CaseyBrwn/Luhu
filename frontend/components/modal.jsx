@@ -1,32 +1,34 @@
 import React from 'react';
-import connect from "react-redux";
-import loginFormContainer from './splash/Form/login_form_container';
-import signUpFormContainer from './splash/Form/signup_form_container';
-import {closeModal} from '../actions/modal_actions';
-
+import { connect } from "react-redux";
+import LoginFormContainer from './splash/Form/login_form_container';
+import SignUpFormContainer from './splash/Form/signup_form_container';
+import {closeModal, openModal} from "../actions/modal_actions";
 
 
 
 function Modal(props) {
 
-
     if(!props.modal){
         return null;
     }
 
+  
+
     let component;
-    switch(modal) {
+    switch(props.modal) {
         case 'login':
-            component = <loginFormContainer />
-            break;
-    }   case 'signup':
-        component = <signUpFormContainer />
-        break;
+            component = <LoginFormContainer />
+            break
+       case 'signup':
+            component = <SignUpFormContainer />
+        break
         default: return null;
     }
 
+
+  
     return (
-        <div className="modal-background" onClicl={props.closeModal}>
+        <div className="modal-background" onClick={props.closeModal}>
             <div className="modal-child" onClick={e => e.stopPropagation()}>
                 {component}
             </div>
@@ -53,4 +55,6 @@ const mapDispatchToProps = (dispatch) =>{
 
 };
 
+
+export default connect(mapStateToProps, mapDispatchToProps)(Modal);
 
