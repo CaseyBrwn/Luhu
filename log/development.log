@@ -23811,3 +23811,93 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 3839ms (Views: 3831.6ms | ActiveRecord: 4.7ms)
 
 
+Started GET "/" for ::1 at 2019-05-30 12:59:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendered static_pages/root.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 1038ms (Views: 1017.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2019-05-30 13:02:50 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendered static_pages/root.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 407ms (Views: 384.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2019-05-30 13:04:02 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendered static_pages/root.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 331ms (Views: 310.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-05-30 13:05:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 320ms (Views: 297.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-05-30 13:07:23 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendered static_pages/root.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 432ms (Views: 419.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2019-05-30 13:08:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 231ms (Views: 215.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-05-30 13:09:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 282ms (Views: 262.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-05-30 13:09:31 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 253ms (Views: 238.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-05-30 13:09:49 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendered static_pages/root.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 48ms (Views: 45.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-05-30 13:11:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendered static_pages/root.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 349ms (Views: 327.4ms | ActiveRecord: 0.4ms)
+
+

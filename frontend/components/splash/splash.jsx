@@ -27,7 +27,7 @@ class Splash extends React.Component{
                     <ul className="splashtext">
                         <li><h1>All Your TV In One Place</h1></li>
                         <li className="splashtextWatch">Watch thousands of shows and movies, with plans starting at $5.99/month</li>
-                        <li className="splashnetworks"> HBQ, SHOWMIME, CIMENAX, and STARS availible as add-ons.</li>
+                    <li className="splashnetworks"> HBQ, SHOWMIME, CIMENAX, and STARS available as add-ons.</li>
                         <li><button className="splashlink" onClick={this.props.openModel}>START YOUR FREE TRIAL</button></li>
                         <li className="splashfree">Free trial availbile for new and eligbile returning subscribers only.</li>
                     </ul>
