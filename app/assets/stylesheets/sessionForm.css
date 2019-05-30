@@ -34,10 +34,15 @@
     width: 309px;
     height: 57px;
     background-color: #3b5998;
+    margin-bottom: 25px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
 }
 
 .sessionlabel{
-    padding: 5px;
+    padding: 8px;
     font-size: 12px;
 
 }
@@ -48,9 +53,9 @@
     height: 400px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding-bottom: 50px;
+    margin-top: 10%;
+    
+    padding-bottom: 100px;
     border-bottom: 1px solid rgb(230, 227, 227);
 }
 
@@ -84,6 +89,7 @@
     position: relative;
     top: 3px;
     vertical-align: middle;
+    
 }
 
 .switchButton{
@@ -102,18 +108,43 @@
     height: 57px;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
+    margin-top: 25px;
+    cursor: pointer;
 }
 
 
 .inputBox { 
     background: rgb(234, 236, 236); 
-    height: 43px;
-    
+    color: rgb(207, 204, 204);
+    height: 26px;
     border: 0px solid;
+    outline: none;
+    border: 1px solid transparent;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.inputBox2 { 
+    background: white; 
+    height: 26px;
+    border: 1px solid black;
+    outline: none;
+    font-size: 15px;
+    padding: 10px;
 }
 
 .sessionform h3{
     color: gray;
-    font-size: 25px;
+    font-size: 23px;
     font-family: 'Roboto', sans-serif;
+}
+
+.splashfooter{
+    position: absolute;
+     right: 0;
+     bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-color: lightgrey;
 }
