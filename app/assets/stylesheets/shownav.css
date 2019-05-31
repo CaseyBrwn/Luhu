@@ -1,0 +1,163 @@
+
+.shownav{
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    height: 73px;
+    width: 100%;
+    color: white;
+    transition: background-color 0.5s ease-out;
+    z-index: 2;
+    
+}
+
+.shownavscroll{
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    height: 73px;
+    width: 100%;
+    background-color: white;
+    color:black;
+    z-index: 2;
+    transition: background-color 0.5s ease-out
+}
+
+.luhu {
+    position: relative;
+    top: -5px;
+    left: -5px;
+  font-size: 28px;
+  margin: 29px;
+  margin-left: 55px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.searchNav{
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.navclickables{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    margin: -10px;
+    
+}
+
+.navleftcontainer{
+    position: relative;
+    left: -10px;
+    display: flex;
+    width: 200px;
+    align-content: center;
+    flex: left;
+    align-self: left;
+}
+
+.navleftcontainer li{
+    margin: auto;
+    padding: 15px ;
+    display: flex;
+    align-content: center;
+}
+
+.navcontainerli > * {
+    margin: 7px;
+    color:white;
+    border-color: white;
+    align-content: center;
+}
+
+.navcontainerli2 > * {
+    margin: 7px;
+    color:black;
+    border-color: black ;
+}
+
+.navlefttext{
+    position: relative;
+    top: 5px;
+}
+
+.checkicon{
+     border: 1px solid;
+     padding-left: 5px;
+     padding-right: 5px;
+     
+}
+.material-icons.md-18 { font-size: 15px; }
+.material-icons.md-19 { font-size: 32px; }
+
+.navlefttext{
+    width: 75px;
+}
+
+.showimage{
+   height: auto;
+   width: 100%;
+}
+
+.userName{
+    display: flex;
+    width: 100px;
+    align-content: center;
+}
+.userletter{
+    position: relative;
+    left: -24px;
+    top: -1px;
+    font-size: 20px;
+    z-index: 1;
+    color: white;
+   
+}
+
+.userletterempty{
+    position: relative;
+    top: -8px;
+    font-size: 20px;
+    color: rgba(189, 192, 189, 0.01);
+    padding: 10px;
+    background-color: rgba(189, 192, 189, 0.3);
+    border-radius: 50%;
+}
+
+.userletterempty2{
+    position: relative;
+    top: -8px;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.showclick{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+
+.showclick li {
+    margin-right: 30px;
+    margin: 20px;
+    margin-top: 30px;
+}
+
+.checkbox {
+    font-size: 12px;
+}
