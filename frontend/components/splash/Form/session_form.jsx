@@ -26,7 +26,7 @@ class SessionForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.processForm(this.state).then(()=>dispatch(this.props.closeModal()))
+        this.props.processForm(this.state).then(()=>dispatch(this.props.closeModal()));
     
 
     }
@@ -38,11 +38,14 @@ class SessionForm extends React.Component{
 
     render(){
     let button = null;
+    let label = null;
 
         if (this.props.formType === 'Signup'){
-            button = <div className="switchButtonContainer"><div>Already have an account?</div><button className="switchButton" onClick={this.props.otherForm}>Log in</button></div>
+            button = <div className="switchButtonContainer"><div>Already have an account?</div><button className="switchButton" onClick={this.props.otherForm}>LOG IN</button></div>
+            label = 'Log in'
         }else{
             button = <div className="switchButtonContainer"><div>Dont have an account?</div><button className="switchButton" onClick={this.props.otherForm}>Start your free trial</button></div> 
+            label = 'Sign in'
         }
     let inputboxclass = "inputBox";
         if(this.state.username.length !== 0){
@@ -66,18 +69,23 @@ class SessionForm extends React.Component{
                 <form onSubmit={this.handleSubmit}>
                     <ul>
                         <li>
-                            <h3>{this.props.formType} to LUHU</h3>
+                            <h3>{label} to Luhu</h3>
                         </li>
                         <li>
-                            <button className='demo' onClick={this.clickHandler}>CONTINUE WITH DEMO</button>
+                           
+                            <div className='demo' onClick={this.clickHandler}>CONTINUE WITH DEMO</div>
+                            
+                        </li>
+                        <li className= "orli">
+                            <h2 className="or"> or </h2>
                         </li>
                         <li className='emailbox'>
                             <label className='sessionlabel'>USERNAME</label>
-                            <input type="text" className={inputboxclass} placeholder="USERNAME" onChange={this.handleChange("username")} value={this.state.username} /> 
+                            <input type="text" className={inputboxclass} placeholder="Enter username" onChange={this.handleChange("username")} value={this.state.username} /> 
                         </li>
                         <li>
                             <label className="sessionlabel">PASSWORD</label>
-                            <input type="password" className={inputpasswordclass} placeholder="PASSWORD" onChange={this.handleChange("password")} value={this.state.password} /> 
+                            <input type="password" className={inputpasswordclass} placeholder="Enter password" onChange={this.handleChange("password")} value={this.state.password} /> 
                         </li>
                         <li>
                             {errors}

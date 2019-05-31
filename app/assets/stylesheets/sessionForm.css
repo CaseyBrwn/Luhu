@@ -6,44 +6,56 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -61%);
+    transform: translate(-48.5%, -69.5%);
     display: flex;
     flex-direction: column;
 }
 
 .closeButton{
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 6.5px;
+    right: .5%;
     background: none;
     background:none;
     color:inherit;
     border:none; 
     cursor: pointer;
-    font-size: 25px;
+    font-size: 30px;
     margin: 10px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 100;
+    font-stretch: normal;
+    color: #797c83
     
 }
 
 .emailbox{
+    position: relative;
+    top: -4px;
     border-top: 1px, solid black;
 }
 
 .demo{
     width: 309px;
-    height: 57px;
+    padding: 20px 0px;
     background-color: #3b5998;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     color: white;
-    font-size: 15px;
+    font-size: 14px;
     border: none;
     cursor: pointer;
+    text-align: center;
+    font-family: 'Mandali', sans-serif;
 }
 
 .sessionlabel{
-    padding: 8px;
+    position: relative;
+    top: -4px;
+    left: -4px;
+    padding: 5px;
     font-size: 12px;
+    font-family: 'Mandali', sans-serif;
+    font-weight: 900;
 
 }
 
@@ -53,10 +65,10 @@
     height: 400px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
+    margin-top: 11%;
     
     padding-bottom: 100px;
-    border-bottom: 1px solid rgb(230, 227, 227);
+   
 }
 
 .sessionform form ul {
@@ -66,7 +78,7 @@
 }
 
 .sessionform form li {
-    padding: 10px;
+    padding: 9px;
     display: flex;
     flex-direction: column;
     width: 308px;
@@ -74,21 +86,26 @@
 
 
 .switchButtonContainer{
-    position: absolute;
-    top: 94%;
+    position: relative;
+    top: -8px;
     margin-left: auto;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-top: 20px;
+    border-top: 1px solid rgb(230, 227, 227);
     
 }
 
 .switchButtonContainer div{
     position: relative;
-    top: 3px;
+    top: 4px;
     vertical-align: middle;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #aeb4bf;
     
 }
 
@@ -97,12 +114,14 @@
     color:inherit;
     border:none; 
     cursor: pointer;
-    font-size: 15px;
-    color: blue;
-    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #3370bb;
+    font-family: 'Open Sans', sans-serif
 }
 
 .sessionSubmit{
+    position: relative;
+    top: -5px;
     background-color: black;
     color: white;
     height: 57px;
@@ -110,12 +129,14 @@
     font-size: 15px;
     margin-top: 15px;
     cursor: pointer;
+    box-shadow: none;
+    border: none;
 }
 
 
 .inputBox { 
     box-sizing: border-box;
-    background: rgb(234, 236, 236); 
+    background: rgb(246, 247, 247); 
     color: black;
     height: 49px;
     border: 0px solid;
@@ -123,6 +144,7 @@
     border: .5px solid transparent;
     font-size: 15px;
     padding: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .inputBox2 { 
@@ -136,9 +158,39 @@
     padding: 10px;
 }
 
+.inputBox::placeholder{
+    color: rgb(209, 202, 202);
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+
+.or {
+    padding: 5px;
+    background-color: inherit;
+    color: rgb(126, 123, 123);
+    white-space: pre;
+    margin-top: -25px;
+}
+
+h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+h2:before, h2:after{
+  content: "";
+  flex: 1 1;
+  border-bottom: 2px solid rgb(240, 238, 238);
+  margin: auto;
+}
+
+
+
 .sessionform h3{
+    position: relative;
+    top: -3px;
     color: gray;
-    font-size: 23px;
+    font-size: 22px;
     font-family: 'Roboto', sans-serif;
 }
 

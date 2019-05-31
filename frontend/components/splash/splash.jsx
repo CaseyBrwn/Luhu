@@ -32,7 +32,7 @@ class Splash extends React.Component{
                         <li className="splashfree">Free trial availbile for new and eligbile returning subscribers only.</li>
                     </ul>
                 <footer className="splashfooter">
-                    <a href="https://github.com/CaseyBrwn/Luhu://">LUHU GIT HUB LINK</a>
+                    <a href="https://github.com/CaseyBrwn/Luhu://">LUHU GIT HUB</a>
                     <span>© 2019 LUHU</span>
                 </footer> 
                   
