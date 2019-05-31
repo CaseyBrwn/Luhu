@@ -25,10 +25,6 @@ class ShowIndex extends React.Component {
 
                 </div>
 
-                <div>
-                    <h1>Site is Currently Under Contruction click the log out button to see that cool splash page again</h1>
-                    <button onClick={this.onClickHandler}>LOGOUT</button>
-                </div>
             </div>
         );
     }
