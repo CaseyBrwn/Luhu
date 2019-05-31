@@ -9,7 +9,7 @@
     justify-content: space-between;
     height: 73px;
     width: 100%;
-    color: white;
+    color: rgb(230, 230, 230);
     transition: background-color 0.5s ease-out;
     z-index: 2;
     
@@ -110,11 +110,7 @@
    width: 100%;
 }
 
-.userName{
-    display: flex;
-    width: 100px;
-    align-content: center;
-}
+
 .userletter{
     position: relative;
     left: -24px;
@@ -122,6 +118,7 @@
     font-size: 20px;
     z-index: 1;
     color: white;
+    height: 18px;
    
 }
 
@@ -133,6 +130,7 @@
     padding: 10px;
     background-color: rgba(189, 192, 189, 0.3);
     border-radius: 50%;
+    height: 11px;
 }
 
 .userletterempty2{
@@ -143,6 +141,7 @@
     padding: 10px;
     background-color: black;
     border-radius: 50%;
+    height: 11px;
 }
 
 .showclick{
@@ -160,4 +159,31 @@
 
 .checkbox {
     font-size: 12px;
+}
+
+.dropDown{
+    display:flex;
+    position: absolute;
+    left: -200px;
+    top: 54px;
+    height: 500px;
+    width: 300px; 
+    background-color: white;
+    
+
+
+}
+
+.userName{
+    position: relative;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    align-content: center;
+}
+
+.showlogout{
+    color: black;
+    cursor: pointer;
+
 }

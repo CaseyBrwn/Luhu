@@ -1,6 +1,4 @@
 import React from "react";
-import LoginFormContainer from "./Form/login_form_container";
-import SignupFormContainer from "./Form/signup_form_container";
 import SplashNav from "./greeting/greeting_container";
 import {AuthRoute} from '../../util/rout_util';
 import { Link } from 'react-router-dom';
