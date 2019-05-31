@@ -9,7 +9,7 @@
     justify-content: space-between;
     height: 73px;
     width: 100%;
-    color: rgb(230, 230, 230);
+    color: white;
     transition: background-color 0.5s ease-out;
     z-index: 2;
     
@@ -25,7 +25,7 @@
     justify-content: space-between;
     height: 73px;
     width: 100%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.97);
     color:black;
     z-index: 2;
     transition: background-color 0.5s ease-out
@@ -43,7 +43,10 @@
 
 .searchNav{
     display: flex;
+    position: relative;
+    top: 2px;
     justify-content: center;
+    align-content: center;
     vertical-align: middle;
 }
 
@@ -51,9 +54,9 @@
     display:flex;
     justify-content: space-between;
     width: 100%;
-    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     margin: -10px;
+    font: 400 13px system-ui;
     
 }
 
@@ -64,7 +67,6 @@
     width: 200px;
     align-content: center;
     flex: left;
-    align-self: left;
 }
 
 .navleftcontainer li{
@@ -75,6 +77,8 @@
 }
 
 .navcontainerli > * {
+    position: relative;
+    left: 5px;
     margin: 7px;
     color:white;
     border-color: white;
@@ -87,34 +91,54 @@
     border-color: black ;
 }
 
-.navlefttext{
-    position: relative;
-    top: 5px;
+.textSearch{
+    
 }
-
-.checkicon{
-     border: 1px solid;
-     padding-left: 5px;
-     padding-right: 5px;
-     
-}
-.material-icons.md-18 { font-size: 15px; }
-.material-icons.md-19 { font-size: 32px; }
 
 .navlefttext{
     width: 75px;
+    position: relative;
+    top: 4px;
 }
 
-.showimage{
-   height: auto;
-   width: 100%;
+.browseIcon{
+    position: relative;
+    top: 1px;
 }
+
+.navlefttext2{
+    width: 75px;
+    position: relative;
+    top: 1px;
+    left: -4px;
+}
+
+.checkicon{
+    position: relative;
+    left: -4px;
+     border: 1px solid;
+     padding-left: 5px;
+     padding-right: 5px;
+     padding-top: 1px;
+     
+}
+.material-icons.md-18 { 
+    font-size: 15px; 
+}
+.material-icons.md-19 { 
+    font-size: 32px; 
+    position: relative;
+    left: -5px;
+}
+
+
+
 
 
 .userletter{
     position: relative;
     left: -24px;
-    top: -1px;
+    top: -2px;
     font-size: 20px;
     z-index: 1;
     color: white;
@@ -124,7 +148,7 @@
 
 .userletterempty{
     position: relative;
-    top: -8px;
+    top: -7px;
     font-size: 20px;
     color: rgba(189, 192, 189, 0.01);
     padding: 10px;
@@ -135,7 +159,7 @@
 
 .userletterempty2{
     position: relative;
-    top: -8px;
+    top: -7px;
     font-size: 20px;
     color: black;
     padding: 10px;
@@ -145,10 +169,12 @@
 }
 
 .showclick{
+    top: 8px;
+    left: 7px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 .showclick li {
@@ -161,21 +187,27 @@
     font-size: 12px;
 }
 
-.dropDown{
+.dropDown{ 
+    box-sizing: content-box;
+    padding: 20px;
     display:flex;
+    align-items: center;
     position: absolute;
-    left: -200px;
-    top: 54px;
-    height: 500px;
+    left: -232px;
+    top: 47px;
+    height: 50px;
     width: 300px; 
-    background-color: white;
-    
+    background-color: white; 
+}
 
-
+.dropDown li {
+    color: grey;
 }
 
 .userName{
     position: relative;
+    top: 6px;
+    left: 2px;
     display: flex;
     width: 100px;
     height: 100px;

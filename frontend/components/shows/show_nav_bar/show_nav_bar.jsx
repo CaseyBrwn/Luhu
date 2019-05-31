@@ -60,7 +60,7 @@ class ShowNav extends React.Component {
         let nameletter = this.props.currentUser.username[0].toUpperCase();
         let nameDropDown = null;
         if(this.state.hoverName){
-            nameDropDown = <ul className="dropDown"><div className="showlogout" onClick={this.props.logoutUser} >Log Out</div></ul>
+            nameDropDown = <ul className="dropDown"><li className="showlogout" onClick={this.props.logoutUser} >Log Out</li></ul>
         }
         return (
 
@@ -79,13 +79,13 @@ class ShowNav extends React.Component {
                             <div className="checkicon">
                                 <i className="material-icons md-18" >done</i>
                             </div>
-                            <div className="navlefttext">MY STUFF</div> 
+                            <div className="navlefttext2">MY STUFF</div> 
                         </li>
                     </ul>
                     <ul className="showclick">
                         <li className="searchNav">
                             <i className="material-icons md-19">search</i>
-                            <div>SEARCH</div>
+                            <div className="textSearch">SEARCH</div>
                         </li>
                         <li onMouseEnter={this.onMouseEnterHandler} onMouseLeave={this.onMouseLeaveHandler} className='userName'>
                             <div className={this.state.userletterempty}>{nameletter}</div>

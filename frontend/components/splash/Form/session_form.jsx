@@ -42,10 +42,10 @@ class SessionForm extends React.Component{
 
         if (this.props.formType === 'Signup'){
             button = <div className="switchButtonContainer"><div>Already have an account?</div><button className="switchButton" onClick={this.props.otherForm}>LOG IN</button></div>
-            label = 'Log in'
+            label = 'Create Your Account'
         }else{
             button = <div className="switchButtonContainer"><div>Dont have an account?</div><button className="switchButton" onClick={this.props.otherForm}>Start your free trial</button></div> 
-            label = 'Sign in'
+            label = 'Log in to Luhu'
         }
     let inputboxclass = "inputBox";
         if(this.state.username.length !== 0){
@@ -69,7 +69,7 @@ class SessionForm extends React.Component{
                 <form onSubmit={this.handleSubmit}>
                     <ul>
                         <li>
-                            <h3>{label} to Luhu</h3>
+                            <h3>{label}</h3>
                         </li>
                         <li>
                            
