@@ -10,7 +10,7 @@
 #
 
 class Movie < ApplicationRecord
-    validates :titles, :description, presence: true
+    validates :title, :description, presence: true
 
     has_one_attached :photo
 
