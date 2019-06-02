@@ -13,16 +13,16 @@
 }
 
 .splashimage{
+object-fit: cover;
    height: 760px;
    width: 100%;
 }
 
 .splashimage2{
-   height: auto;
+   height: 824px;
    align-self: center;
- 
-   width: 100%;
-   max-width: 84%;
+ object-fit: cover;
+   max-width: 100%;
 
 }
 

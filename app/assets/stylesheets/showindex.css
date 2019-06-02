@@ -1,7 +1,43 @@
 
 
 .showimage{
-   height: 1600px;
+   z-index: -2;
+   height: 100%;
    width: 100%;
+   background-image: linear-gradient(to right, red , yellow);
+}
+
+.show_image_container{
+   position: relative;
+}
+
+
+.show_image_container::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to left, transparent 50%,rgb(59, 161, 18) 100%);
+  margin-top: -834px;
+  height: 834px;
+  width: 100%;
+  content: '';
+}
+
+.ShowIndex img{
+  width: Auto;
+  height: Auto;
+}
+
+.topshow{
+   position: absolute;
+   top: 50%;
+   left: 5%;
+   z-index: 2;
+   color: white;
+   display: flex;
+   flex-direction: column;
+}
+
+.topshow li {
+   margin: 5px;
 }
 
