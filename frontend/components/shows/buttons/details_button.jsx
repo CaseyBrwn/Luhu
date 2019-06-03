@@ -11,7 +11,7 @@ class DetailsButtons extends React.Component{
         this.handledetailMouseLeave = this.handledetailMouseLeave.bind(this);
         this.onClickHandler = this.onClickHandler.bind(this);
     }
-
+m"
     handledetailMouseEnter(){
         this.setState({detailhover: true});
     }
