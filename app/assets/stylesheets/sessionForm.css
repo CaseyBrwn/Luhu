@@ -169,14 +169,13 @@
     color: rgb(126, 123, 123);
     white-space: pre;
     margin-top: -25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-h2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-h2:before, h2:after{
+
+.or:before, .or:after{
   content: "";
   flex: 1 1;
   border-bottom: 2px solid rgb(240, 238, 238);

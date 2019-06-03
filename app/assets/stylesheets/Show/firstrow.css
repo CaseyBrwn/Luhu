@@ -1,0 +1,379 @@
+
+.firstouter{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.firstUltra{
+  height: 100%;
+  width: 100%;
+}
+
+.secondrowcontainer{
+ box-sizing: border-box;
+    position: absolute;
+    bottom: 30%;
+    width: 20%;
+    height: 70%;
+    background-color: lightblue;
+    z-index: -10;
+}
+
+.firstrowcontainer{
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 30%;
+    width: 20%;
+    height: 70%;
+    background-color: lightblue;
+    z-index: 5;
+    transition: all .5s linear
+}
+
+.firstrowcontainer2{
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 30%;
+    width: 20%;
+    height: 45%;
+    background-color: lightblue;
+    transition: all .5s linear
+}
+
+.firstrowcontainer::after {
+  background-image: linear-gradient(to bottom, transparent 50%,rgb(13, 243, 186) 100%);
+  display: block;
+  position: relative;
+  top: -100.5%;
+  margin-top: 0px;
+  height: 100%;
+  width: 100%;
+  content: '';
+  object-fit: cover;
+  transition: background-color 1s ease-out;
+}
+
+.firstrowcontainer2::after {
+    content: " ";
+  z-index: 10;
+  display: block;
+   top: -100.5%;
+  position: relative;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(13, 243, 186, 0.8);
+  transition: background-color 1s ease-out;
+}
+
+.blankspace{
+    white-space: pre;
+}
+
+.tall_image{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+}
+.firstinfo{
+    color: white;
+}
+
+.firstrowtitle{
+    position: absolute;
+    top:-20%;
+    z-index: 7;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    padding: 30px;
+    font-weight: 900;
+}
+
+.firstrowdescription{
+
+}
+
+
+.sizeclass{
+    font: white;
+}
+
+.firstrowimage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: fill;
+    width: 100%;
+    height: 40%;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity .75s ease-out;
+}
+
+.firstrowimage2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: fill;
+    width: 100%;
+    height: 40%;
+   
+    z-index: 5;
+    transition: opacity .75s ease-out;
+}
+
+
+
+
+
+.firstrowimagehover{
+     width: 100%;
+    z-index: 4;
+    height: 35%;
+}
+
+
+.material-icons.fr-1{
+   position: absolute;
+   top:20%;
+   left:50%;
+   transform: translate(-50%, -50%);
+    font-size: 50px;
+    z-index: 150;
+    color: white;
+    border: 3px solid rgb(255, 255, 255);
+   border-radius: 50%;
+   padding: .5px;
+   background-color: rgb(0, 0, 0, .5);
+   transition-delay: 2s;
+}
+
+.material-icons.fr-2{
+   position: absolute;
+   top:20%;
+   left:50%;
+   transform: translate(-50%, -50%);
+    font-size: 55px;
+    z-index: 150;
+    color: white;
+    border: 3px solid rgb(255, 255, 255);
+   border-radius: 50%;
+   padding: .5px;
+   background-color: rgb(0, 0, 0, .5);
+    transition: font-size .25s;
+}
+
+ /* transition-delay: 2s;
+   transition: background-color 0.5s ease-out; */
+
+
+
+
+
+.firstrowcontainera{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: lightblue;
+}
+
+.firstrowcontainera::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent 50%,rgb(59, 161, 18) 100%);
+  top: -100%;
+  margin-top: 0px;
+  height: 100%;
+  width: 100%;
+  content: '';
+  object-fit: cover;
+}
+
+.firstrowcontainerb{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: lightblue;
+}
+
+.firstrowcontainerb::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent 50%,rgb(212, 16, 16) 100%);
+  top: -100%;
+  margin-top: 0px;
+  height: 100%;
+  width: 100%;
+  content: '';
+  object-fit: cover;
+}
+
+
+.firstrowcontainerc{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: lightblue;
+}
+
+.firstrowcontainerc::after {
+  display: block;
+  background-image: linear-gradient(to bottom, transparent 50%,rgb(250, 163, 1) 100%);
+  position: relative;
+  top: -100%;
+  margin-top: 0px;
+  height: 100%;
+  width: 100%;
+  content: '';
+  object-fit: cover;
+}
+
+ .firstrowcontainerd{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: lightblue;
+}
+
+.firstrowcontainerd::after {
+  background-image: linear-gradient(to bottom, transparent 50%,rgb(235, 231, 0) 100%);
+  display: block;
+  position: relative;
+  top: -100%;
+  margin-top: 0px;
+  height: 100%;
+  width: 100%;
+  content: '';
+  object-fit: cover;
+}
+
+.firstrowcontainere{
+  
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: lightblue;
+}
+
+.firstrowcontainere::after {
+  display: block;
+  background-image: linear-gradient(to bottom, transparent 50%,rgb(13, 243, 186) 100%);
+  position: relative;
+  top: -100%;
+  margin-top: 0px;
+  height: 100%;
+  width: 100%;
+  content: '';
+  object-fit: cover;
+}
+
+.firstrowcontainerf{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: lightblue;
+}
+
+.firstrowcontainerf::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent 50%,rgb(13, 120, 243) 100%);
+  top: -100%;
+  margin-top: 0px;
+  height: 100%;
+  width: 100%;
+  content: '';
+  object-fit: cover;
+}
+
+.firstrowcontainerg{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: lightblue;
+}
+
+.firstrowcontainerg::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent 50%,rgb(93, 13, 243) 100%);
+  top: -100%;
+  margin-top: 0px;
+  height: 100%;
+  width: 100%;
+  content: '';
+  object-fit: cover;
+}
+
+.firstrowcontainerh{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: lightblue;
+}
+
+.firstrowcontainerh::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent 50%,rgb(224, 13, 243) 100%);
+  top: -100%;
+  margin-top: 0px;
+  height: 100%;
+  width: 100%;
+  content: '';
+  object-fit: cover;
+}
+
+.firstrowcontaineri{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: lightblue;
+}
+
+.firstrowcontaineri::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, transparent 50%,rgb(111, 107, 121) 100%);
+  top: -100%;
+  margin-top: 0px;
+  height: 100%;
+  width: 100%;
+  content: '';
+  object-fit: cover;
+}
+
+.firstrowcontainerj{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: lightblue;
+}
+
+.firstrowcontainerj::after {
+  background-image: linear-gradient(to bottom, transparent 50%,rgb(255, 255, 255) 100%);
+  display: block;
+  position: relative;
+  top: -100%;
+  margin-top: 0px;
+  height: 100%;
+  width: 100%;
+  content: '';
+  object-fit: cover;
+}
+
+
+
