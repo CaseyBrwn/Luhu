@@ -98,16 +98,22 @@
 
 .material-icons.tn-1{
    position: relative;
-   top: 40%;
+
+   
    font-size:calc(40px + 1.4vw)
 }
 
-.material-icons.tn-2{
-   font-size: 35px;
-   border: 2px solid rgb(255, 255, 255, .5);
-   border-radius: 50%;
-   padding: .5px;
+.material-icons.tn-1:hover{
+   position: relative;
+   font-size:calc(50px + 1.4vw);
+   transition: all .5s;
+   cursor: pointer;
 }
+
+
+
+
+
 
 .material-icons.tn-3{
    font-size: 35px;
@@ -121,6 +127,11 @@
    padding-right: 20px;
    letter-spacing: 0.1em;
 }
+
+.startWatch:hover{
+   cursor: pointer;
+}
+
 
 
 .rowli{

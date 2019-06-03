@@ -1,12 +1,18 @@
 import React from 'react';
 import ShowNavBar from './show_nav_bar/show_nav_bar_container';
 import FirstRowShow from './show_displays/Firstrow';
+import DetailsButton from './buttons/details_button';
 
 
 class ShowIndex extends React.Component {
     constructor(props){
         super(props);
+        this.state = {
+            detailshover: false
+        };
         this.onClickHandler = this.onClickHandler.bind(this);
+        this.handledetailsenter = this.handledetailsenter.bind(this);
+        this.handledetailsleave = this.handledetailsleave.bind(this);
     }
 
     componentDidMount(){
@@ -16,6 +22,12 @@ class ShowIndex extends React.Component {
 
     onClickHandler(){
         this.props.logoutUser();
+    }
+    handledetailsenter(){
+        this.setState({detailshover: true});
+    }
+    handledetailsleave(){
+        this.setState({detailshover: false});
     }
 
 
@@ -29,9 +41,19 @@ class ShowIndex extends React.Component {
             return (<div>{show.description}</div>)
         })
 
+        let allIds = shows.map((show, i) => {
+            return (show.id)
+        })
+
         let firstRow = shows.map((show, i) => {
             return(<li className="rowli" key={show.id}><FirstRowShow show={show}/></li>)  
         })
+        let detailsclass = "detailscontainer";
+        if(this.state.detailshover){
+            detailsclass = "detailscontainer2";   
+        }
+        
+
     
         // "https://www.hulu.com/press/wp-content/uploads/2018/04/THT_S2_MQ-1600x520.jpg"
         return(
@@ -56,11 +78,17 @@ class ShowIndex extends React.Component {
                             </li>
                             <li>
                                 <ul className="topshow_nav">
-                                    <li className="material-icons tn-1">play_circle_filled</li>
-                                    
-                                        <li className="startWatch">START WATCHING</li>
-                                        <li className="material-icons tn-2">arrow_forward</li>
-                                        <li className="material-icons tn-3">add</li>
+
+                                        <li className="playcontainer">
+                                             <div className="material-icons tn-1">play_circle_filled</div> 
+                                        </li>
+                                        <li> 
+                                            <div className="startWatch">START WATCHING</div>
+                                        </li>
+                                        <li>
+                                            <DetailsButton color="black" showId={null} />
+                                        </li> 
+                                    <li className="material-icons tn-3">add</li>
                             
                                 </ul>
                             </li>

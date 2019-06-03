@@ -14,13 +14,8 @@ class Modal extends React.Component{
         };
     }
 
-    componentDidMount(){
+ 
 
-        setTimeout(() => {
-            this.setState({ modalChild: "modal-child2" });
-        }, 100);
-
-    }
 
     render() {
         if(!this.props.modal){

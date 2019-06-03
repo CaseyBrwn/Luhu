@@ -41,10 +41,10 @@ class SessionForm extends React.Component{
     render(){
     let button = null;
     let label = null;
-    let sessionform = "sessionform";
+    let sessionform = "sessionformfirst";
 
     if(this.state.mounted){
-        sessionform = "sessionfrom2";
+        sessionform = "sessionfrom";
     }
 
         if (this.props.formType === 'Signup'){

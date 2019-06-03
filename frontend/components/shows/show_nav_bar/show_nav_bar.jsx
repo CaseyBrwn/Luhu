@@ -39,10 +39,7 @@ class ShowNav extends React.Component {
                             });
         }
     }
-    onHoverHandler(){
-        dropdown
-        this.setstate({dropdown });
-    }
+ 
 
     onClickHandler(e) {
         this.props.openModal(e.target.value);

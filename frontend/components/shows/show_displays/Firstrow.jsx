@@ -53,6 +53,27 @@ class FirstRowShow extends React.Component{
     }
 
     render(){
+        let rowcontainer= "firstrowcontainer";
+        switch(this.props.show.title){
+     
+            case "Nature":
+                rowcontainer = "firstrowcontainernature";
+                break;
+               
+            case "Humans":
+                rowcontainer = "firstrowcontainerhumans";
+                break;
+            case "Cities":
+                rowcontainer = "firstrowcontainercities";
+                break;
+            case "Cats":
+                rowcontainer = "firstrowcontainercats";
+                break;
+            case "Top Cars":  
+                rowcontainer = "firstrowcontainertopcars";
+                break;
+        }
+    
 
     
         let firstrowimage = "firstrowimage";
@@ -61,23 +82,26 @@ class FirstRowShow extends React.Component{
         let tallimage = "tall_image";
         let firstrowtitle = "firstrowtitle";
         let description = "firstrowdescription";
+        let footer = null;
         
         if(this.state.hover === true){
             firstrowimage = "firstrowimage2";
+            rowcontainer = `${rowcontainer}${2}`;
             firstrowcontainer = "firstrowcontainer2";
             firstUltra = "firstUltra2";
             tallimage = "tall_image2";
             firstrowtitle = "firstrowtitle2";
             description = "firstrowdescription2";
+            footer = <div className="bottombuttons">
+                <li className="material-icons bt-2">arrow_forward</li>
+                <li className="material-icons bt-3">add</li>
+            </div>
         }
-
-
+   
         return (
             <><div className={firstUltra} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-                
-                <div className={firstrowcontainer}>
-        
-                        
+                <div className={rowcontainer}>
+          
                 </div>
                 <img className={tallimage} src={this.props.show.tall_photoUrl} />
                 <div onMouseEnter={this.handleMousePictureenter} onMouseLeave={this.handleMousePictureleave} className="secondrowcontainer">
@@ -93,11 +117,8 @@ class FirstRowShow extends React.Component{
                         </div>
                     </ul>
                 </div>
-
-                <div className="bottombuttons">
-                    <li className="material-icons tn-2">arrow_forward</li>
-                    <li className="material-icons tn-3">add</li>
-                </div>
+                {footer}
+               
             </div>
            </>
         )
