@@ -8,6 +8,7 @@ class SessionForm extends React.Component{
         this.state = {
             username: '',
             password: '',
+            mounted: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.clickHandler = this.clickHandler.bind(this);
@@ -33,12 +34,18 @@ class SessionForm extends React.Component{
 
     componentDidMount(){
         this.props.clearErrors();
+        this.setState({mounted: true});
     }
 
 
     render(){
     let button = null;
     let label = null;
+    let sessionform = "sessionform";
+
+    if(this.state.mounted){
+        sessionform = "sessionfrom2";
+    }
 
         if (this.props.formType === 'Signup'){
             button = <div className="switchButtonContainer"><div>Already have an account?</div><button className="switchButton" onClick={this.props.otherForm}>LOG IN</button></div>

@@ -6,34 +6,48 @@ import {closeModal, openModal} from "../actions/modal_actions";
 
 
 
-function Modal(props) {
-
-    if(!props.modal){
-        return null;
+class Modal extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            modalChild: "modal-child"
+        };
     }
 
-  
+    componentDidMount(){
 
-    let component;
-    switch(props.modal) {
-        case 'login':
-            component = <LoginFormContainer />
+        setTimeout(() => {
+            this.setState({ modalChild: "modal-child2" });
+        }, 100);
+
+    }
+
+    render() {
+        if(!this.props.modal){
+            return null;
+        }
+
+        let component;
+        switch(this.props.modal) {
+            case 'login':
+                component = <LoginFormContainer />
+                break
+        case 'signup':
+                component = <SignUpFormContainer />
             break
-       case 'signup':
-            component = <SignUpFormContainer />
-        break
-        default: return null;
-    }
+            default: return null;
+        }
 
 
-  
-    return (
-        <div className="modal-background" onClick={props.closeModal}>
-            <div className="modal-child" onClick={e => e.stopPropagation()}>
-                {component}
+    
+        return (
+            <div className="modal-background" onClick={this.props.closeModal}>
+                <div className={this.state.modalChild} onClick={e => e.stopPropagation()}>
+                    {component}
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 
 }
 
