@@ -1,69 +1,83 @@
 
 .firstouter{
     position: absolute;
-    width: 100%;
+    width: 20%;
     height: 100%;
 }
 
 .firstUltra{
+  position: relative;
+  top:50%;
+   left:50%;
+   transform: translate(-50%, -50%);
   height: 100%;
   width: 100%;
+}
+
+.firstUltra2{
+  top:50%;
+   left:50%;
+   transform: translate(-50%, -50%);
+  position: relative;
+    width: 104%;
+    height: 104%;
+    z-index: 5;
+
 }
 
 .secondrowcontainer{
  box-sizing: border-box;
     position: absolute;
-    bottom: 30%;
-    width: 20%;
-    height: 70%;
-    background-color: lightblue;
-    z-index: -10;
+    width: 100%;
+    height: 100%;
+
 }
 
 .firstrowcontainer{
     box-sizing: border-box;
     position: absolute;
-    bottom: 30%;
-    width: 20%;
-    height: 70%;
-    background-color: lightblue;
-    z-index: 5;
+    width: 100%;
+    height: 100%;
+   
+  
+
     transition: all .5s linear
 }
 
 .firstrowcontainer2{
     box-sizing: border-box;
+    bottom:0;
     position: absolute;
-    bottom: 30%;
-    width: 20%;
-    height: 45%;
+    width: 100%;
+    height: 70%;
     background-color: lightblue;
     transition: all .5s linear
 }
 
 .firstrowcontainer::after {
-  background-image: linear-gradient(to bottom, transparent 50%,rgb(13, 243, 186) 100%);
+  background-image: linear-gradient(to bottom, transparent 10%,rgb(13, 243, 186) 100%);
   display: block;
   position: relative;
-  top: -100.5%;
+  top: -101%;
   margin-top: 0px;
-  height: 100%;
+  height: 101%;
   width: 100%;
   content: '';
   object-fit: cover;
-  transition: background-color 1s ease-out;
+  transition: background-image 1s ease-out;
 }
 
 .firstrowcontainer2::after {
     content: " ";
   z-index: 10;
   display: block;
-   top: -100.5%;
+   top: -101%;
   position: relative;
-  height: 100%;
+  height: 101%;
   bottom: 0;
   left: 0;
   right: 0;
+  background: linear-gradient(to bottom, transparent 10%,rgb(13, 243, 186) 100%);
   background: rgba(13, 243, 186, 0.8);
   transition: background-color 1s ease-out;
 }
@@ -76,7 +90,6 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-    z-index: -5;
 }
 .firstinfo{
     color: white;
@@ -84,7 +97,7 @@
 
 .firstrowtitle{
     position: absolute;
-    top:-20%;
+    top: 50%;
     z-index: 7;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
@@ -107,7 +120,7 @@
     left: 0;
     object-fit: fill;
     width: 100%;
-    height: 40%;
+    height: 30%;
     z-index: 5;
     opacity: 0;
     transition: opacity .75s ease-out;
@@ -119,7 +132,7 @@
     left: 0;
     object-fit: fill;
     width: 100%;
-    height: 40%;
+    height: 30%;
    
     z-index: 5;
     transition: opacity .75s ease-out;

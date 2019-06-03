@@ -37,15 +37,17 @@ class FirstRowShow extends React.Component{
         let materialiconplay = null;
         let firstrowimage = "firstrowimage";
         let showcon = "firstrowcontainer";
+        let firstUltra = "firstUltra";
         
         if(this.state.hover === true){
             firstrowimage = "firstrowimage2";
             materialiconplay = <i className={this.state.play}>play_arrow</i>
             showcon = "firstrowcontainer2"
+            firstUltra = "firstUltra2"
         }
 
         return (
-            <><div className="firstultra" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+            <><div className={firstUltra} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
                 <div className={showcon}>
         
                         <img className="tall_image" src={this.props.show.tall_photoUrl}/>
