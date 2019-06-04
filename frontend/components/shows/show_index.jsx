@@ -39,7 +39,7 @@ class ShowIndex extends React.Component {
 
         let header = null;
         if(this.state.didmount){
-            header = <HeaderShow props={show4} />
+            header = <HeaderShow show={show4} />
         }
 
         let firstRow = shows.map((show) => {
@@ -51,7 +51,6 @@ class ShowIndex extends React.Component {
     
         // "https://www.hulu.com/press/wp-content/uploads/2018/04/THT_S2_MQ-1600x520.jpg"
         return(
-           
 
             <div>
                 <div className="splash">

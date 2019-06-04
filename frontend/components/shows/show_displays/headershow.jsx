@@ -6,6 +6,7 @@ import LargePlayButton from '../buttons/large_play_button';
 class HeaderShow extends React.Component{
     constructor(props){
         super(props);
+        debugger
     }
 
 
@@ -16,21 +17,19 @@ class HeaderShow extends React.Component{
 
             <div className="show_image_container">
                 <img className="showimage" src="https://www.perfect-fit.co.uk/media/10938/cat_m3_cat_outside_1.jpg?crop=0,0.34355555555555556,0,0&cropmode=percentage&width=1600&height=700&rnd=131527152160000000" />
-                
-                
                 <ul className='topshow'>
                     <li>
                         <h2>WATCH THE LUHU ORIGINAL SHOW</h2>
                     </li>
                     <li>
-                        <h3>{this.props.title}</h3>
+                        <h3>{this.props.show.title}</h3>
                     </li>
                     <li>
                         <h5>2019  ·  Nature</h5> 
                         {/* place holder until add year and genre to data base */}
                     </li>
                     <li>
-                        <h4>{this.props.description}</h4>
+                        <h4>{this.props.show.description}</h4>
                     </li>
                     <li>
                         <ul className="topshow_nav">
