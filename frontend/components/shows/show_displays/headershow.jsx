@@ -6,7 +6,6 @@ import LargePlayButton from '../buttons/large_play_button';
 class HeaderShow extends React.Component{
     constructor(props){
         super(props);
-
     }
 
 
@@ -20,14 +19,14 @@ class HeaderShow extends React.Component{
                     <h2>WATCH THE LUHU ORIGINAL SHOW</h2>
                 </li>
                 <li>
-                    <h3>{this.props.show.title}</h3>
+                    <h3>{this.props.title}</h3>
                 </li>
                 <li>
                     <h5>2019  ·  Nature</h5> 
                     {/* place holder until add year and genre to data base */}
                 </li>
                 <li>
-                    <h4>{this.props.show.description}</h4>
+                    <h4>{this.props.description}</h4>
                 </li>
                 <li>
                     <ul className="topshow_nav">

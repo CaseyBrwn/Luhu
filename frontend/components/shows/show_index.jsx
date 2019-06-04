@@ -15,9 +15,10 @@ class ShowIndex extends React.Component {
     }
 
     componentDidMount(){
-        this.props.getAllShows();
+        this.props.getAllShows().then(
+            ()=>this.setState({ didmount: true }));
         this.props.getAllMovies();
-        this.setState({didmount: true});
+       
 
     }
 
@@ -34,12 +35,12 @@ class ShowIndex extends React.Component {
 
     render() {
         let shows = this.props.shows;
-        let show4 = null
-        if(this.state.didmount){
-            show4 = shows[3];
-        }
-        
+        let show4 = this.props.shows[3];
 
+        let header = null;
+        if(this.state.didmount){
+            header = <HeaderShow props={show4} />
+        }
 
         let firstRow = shows.map((show) => {
             return(<li className="rowli" key={show.id}><FirstRowShow show={show}/></li>)  
@@ -56,7 +57,7 @@ class ShowIndex extends React.Component {
                 <div className="splash">
                     <div className="show_image_container">
                         <img className="showimage" src="https://www.perfect-fit.co.uk/media/10938/cat_m3_cat_outside_1.jpg?crop=0,0.34355555555555556,0,0&cropmode=percentage&width=1600&height=700&rnd=131527152160000000"/>
-                      <HeaderShow  show={show4} />
+                        {header}
                     </div>
                     <ul className="firstrow">
                         {firstRow}
