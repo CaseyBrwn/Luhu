@@ -55,10 +55,7 @@ class ShowIndex extends React.Component {
 
             <div>
                 <div className="splash">
-                    <div className="show_image_container">
-                        <img className="showimage" src="https://www.perfect-fit.co.uk/media/10938/cat_m3_cat_outside_1.jpg?crop=0,0.34355555555555556,0,0&cropmode=percentage&width=1600&height=700&rnd=131527152160000000"/>
-                        {header}
-                    </div>
+                    {header}
                     <ul className="firstrow">
                         {firstRow}
                     </ul>
