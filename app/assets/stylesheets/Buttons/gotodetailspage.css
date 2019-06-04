@@ -27,11 +27,16 @@
 }
 
 .material-icons.details2.white{
+   position: absolute;
+    top:50%;
+   left:50%;
+   transform: translate(-50%, -50%);
    font-size: 40px;
    color: inherit;
     border: 2px solid rgb(255, 255, 255);
    border-radius: 50%;
    padding: .5px;
+   cursor: pointer;
 }
 
 .material-icons.details.black{
@@ -56,29 +61,59 @@
     border: 2px solid rgb(0, 0, 0);
    border-radius: 50%;
    padding: .5px;
+   cursor: pointer;
+}
+
+
+.gotodetailsContainer{
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    top: -70%;
+   left: -120%;
+   opacity: 0;
+   
+}
+
+.gotodetailsContainer2{
+   position: absolute;
+   height: 100%;
+    width: 200px;
+    top: -82%;
+   left: -121%;
+   opacity: 1;
+  
+   transition: all .25s;
+}
+
+.textdetailscontainer{
+   height: 100%;
+   width: 100%
 }
 
 .gotodetails{
+   position: absolute;
+   bottom: 14px;
+   left: 10px;
     background-color: rgb(51, 48, 48);
     color: white;
     padding: 3px;
-  position: absolute;
-    width: 160px;
-    top: -54%;
-   left: -120%;
    font: 400 13px system-ui;
    text-align: center;
 }
+.material-icons.downarrowcontainer{
+   height: 100%;
+   width: 100%;
+   bottom: 0;
+   position: absolute;
+   
+}
 
-.gotodetails2{
-background-color: rgb(51, 48, 48);
- padding: 3px;
-  position: absolute;
-     width: 160px;
-    top: -60%;
-   left: -120%;
-   transition: all .2s;
-   text-align: center;
-   font: 400 13px system-ui;
+.material-icons.downarrow{
+   color:  rgb(51, 48, 48) ;
+   position: absolute;
+   left: 37%;
+   bottom: 0;
+
 }
 

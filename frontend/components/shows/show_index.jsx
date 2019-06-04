@@ -1,14 +1,13 @@
 import React from 'react';
-import ShowNavBar from './show_nav_bar/show_nav_bar_container';
 import FirstRowShow from './show_displays/Firstrow';
-import DetailsButton from './buttons/details_button';
+import HeaderShow from './show_displays/headershow';
 
 
 class ShowIndex extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            detailshover: false
+            didmount: false
         };
         this.onClickHandler = this.onClickHandler.bind(this);
         this.handledetailsenter = this.handledetailsenter.bind(this);
@@ -18,6 +17,8 @@ class ShowIndex extends React.Component {
     componentDidMount(){
         this.props.getAllShows();
         this.props.getAllMovies();
+        this.setState({didmount: true});
+
     }
 
     onClickHandler(){
@@ -33,25 +34,17 @@ class ShowIndex extends React.Component {
 
     render() {
         let shows = this.props.shows;
+        let show4 = null
+        if(this.state.didmount){
+            show4 = shows[3];
+        }
+        
 
-        let allTitle = shows.map((show, i) => {
-            return (<div>{show.title}</div>)
-        })
-        let allDescriptions = shows.map((show, i) => {
-            return (<div>{show.description}</div>)
-        })
 
-        let allIds = shows.map((show, i) => {
-            return (show.id)
-        })
-
-        let firstRow = shows.map((show, i) => {
+        let firstRow = shows.map((show) => {
             return(<li className="rowli" key={show.id}><FirstRowShow show={show}/></li>)  
         })
-        let detailsclass = "detailscontainer";
-        if(this.state.detailshover){
-            detailsclass = "detailscontainer2";   
-        }
+     
         
 
     
@@ -63,42 +56,8 @@ class ShowIndex extends React.Component {
                 <div className="splash">
                     <div className="show_image_container">
                         <img className="showimage" src="https://www.perfect-fit.co.uk/media/10938/cat_m3_cat_outside_1.jpg?crop=0,0.34355555555555556,0,0&cropmode=percentage&width=1600&height=700&rnd=131527152160000000"/>
-                        <ul className='topshow'>
-                            <li>
-                                <h2>WATCH THE LUHU ORIGINAL SHOW</h2>
-                            </li>
-                            <li>
-                                <h3>{allTitle.pop()}</h3>
-                            </li>
-                            <li>
-                                <h5>2019  ·  Nature</h5>
-                            </li>
-                            <li>
-                                <h4>{allDescriptions.pop()}</h4>
-                            </li>
-                            <li>
-                                <ul className="topshow_nav">
-
-                                        <li className="playcontainer">
-                                             <div className="material-icons tn-1">play_circle_filled</div> 
-                                        </li>
-                                        <li> 
-                                            <div className="startWatch">START WATCHING</div>
-                                        </li>
-                                        <li>
-                                            <DetailsButton color="black" showId={null} />
-                                        </li> 
-                                    <li className="material-icons tn-3">add</li>
-                            
-                                </ul>
-                            </li>
-                          
-
-                            
-                        </ul>
+                      <HeaderShow  show={show4} />
                     </div>
-                      
-
                     <ul className="firstrow">
                         {firstRow}
                     </ul>
