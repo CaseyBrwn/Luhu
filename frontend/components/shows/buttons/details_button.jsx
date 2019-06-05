@@ -1,5 +1,5 @@
 import React from "react";
-import {Redirect} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 
 class DetailsButtons extends React.Component{
     constructor(props) {
@@ -20,22 +20,31 @@ class DetailsButtons extends React.Component{
         this.setState({detailhover: false});
     }   
     onClickHandler(){
+        debugger
+        let type = "movies";
+        if(this.props.content.episode_ids.length > 0){
+            type = "shows";
+        }
 
-        let route = `/${this.props.type}/${this.props.ID}`;
-        < Redirect to={route} />
-        
-
+        let route = `/${type}/${this.props.content.id}`;
+        this.props.history.push(route);
     }
-
+ 
     render(){
+
+        let color = "white";
+        if(this.props.color === "black"){
+            color = "black";
+        }
+
         
         let detailsbuttoncontainer = `detailsbuttoncontainer`;
-        let materialclassName = `material-icons details ${this.props.color}`;
+        let materialclassName = `material-icons details ${color}`;
         let gotodetailsContainer = 'gotodetailsContainer';
 
         if(this.state.detailhover){
             detailsbuttoncontainer = "detailsbuttoncontainer2";
-            materialclassName = `material-icons details2 ${this.props.color}`;
+            materialclassName = `material-icons details2 ${color}`;
             gotodetailsContainer = 'gotodetailsContainer2';
         }
 
@@ -61,4 +70,6 @@ class DetailsButtons extends React.Component{
 
 
 
-export default DetailsButtons;
+
+
+export default DetailsButtons = withRouter(DetailsButtons);

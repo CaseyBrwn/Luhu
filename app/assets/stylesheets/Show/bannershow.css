@@ -17,14 +17,17 @@
 
 .show_image_container::after {
   display: block;
-  position: relative;
+  position: absolute;
+   top: 0;
   background-image: linear-gradient(to left, transparent 50%,rgb(59, 161, 18) 100%);
-  margin-top: -850px;
-  height: 850px;
+
+  height: 100%;
   width: 100%;
   content: '';
   object-fit: cover;
 }
+
+
 
 .ShowIndex img{
   width: Auto;
@@ -34,7 +37,7 @@
 
 .topshow{
    position: absolute;
-   bottom: 15%;
+   bottom: 20%;
    left: 4.6%;
    z-index: 2;
    width: 25%;

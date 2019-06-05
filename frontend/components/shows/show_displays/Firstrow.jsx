@@ -1,4 +1,5 @@
 import React from 'react';
+import DetailsButton from '../buttons/details_button';
 
 
 class FirstRowShow extends React.Component{
@@ -93,7 +94,7 @@ class FirstRowShow extends React.Component{
             firstrowtitle = "firstrowtitle2";
             description = "firstrowdescription2";
             footer = <div className="bottombuttons">
-                <li className="material-icons bt-2">arrow_forward</li>
+                <li><DetailsButton color="white" content={this.props.show}/></li>
                 <li className="material-icons bt-3">add</li>
             </div>
         }

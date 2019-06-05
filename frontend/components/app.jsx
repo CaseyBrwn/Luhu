@@ -7,17 +7,17 @@ import LoginFormContainer from './splash/Form/login_form_container';
 import SplashNav from "./splash/greeting/greeting_container";
 import Modal from "./modal";
 import ShowNavBar from './shows/show_nav_bar/show_nav_bar_container';
-import ShowShowContainer from './video_showpage/show_show_container';
+import { ShowShowPageContainer} from './video_showpage/show_show_container';
 import MovieShowContainer from './video_showpage/movie_show_container';
 
 
 const App = () => (
-    <div>
+    <div className="maindiv">
         <Modal />
-        <RestrictRoute exact path="/" component={ShowNavBar} />
-        <RestrictRoute exact path="/" component={ShowsIndexContainer}/>
-        <RestrictRoute exact path="/show/:showId" component={ShowShowContainer} />
-        <RestrictRoute exact path="/movie/:movieId" component={MovieShowContainer}/>
+        <RestrictRoute exact path="/shows/:showId" component={ShowShowPageContainer} />
+        <RestrictRoute exact path="/movies/:movieId" component={MovieShowContainer} />
+        <RestrictRoute path="/" component={ShowNavBar} />
+        <RestrictRoute path="/" component={ShowsIndexContainer}/>
         <AuthRoute exact path="/splash/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/splash/login" component={LoginFormContainer} />
         <AuthRoute exact path="/splash/signup" component={SignupFormContainer} />

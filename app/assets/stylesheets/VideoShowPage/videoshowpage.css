@@ -1,0 +1,54 @@
+.videoshowPagebackground{
+position: fixed; 
+overflow-y: scroll;
+top: 0; left: 0; right: 0; bottom: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(12, 11, 11, 0.7);
+  z-index: 200;
+}
+
+.maindiv { 
+    position: absolute;
+      top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+    overflow: hidden; 
+    height: 100%;
+    width: 100%;
+}
+
+.headerdiv{
+    width: 100%;
+    height: 71%;
+    min-height: 500px;
+  
+}
+
+
+.showpagecontainer{
+    min-width: 800px;
+  position: absolute;
+   background-color: aqua;
+   height: 95%;
+    width: 88%;
+    top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 200;
+}
+
+.showpagecontainer-enter {
+  opacity: 0.01;
+  transform: scale(1.1);
+}
+
+.showpagecontainer-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 300ms;
+}
