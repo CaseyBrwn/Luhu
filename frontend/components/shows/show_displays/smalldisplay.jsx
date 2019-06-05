@@ -1,4 +1,5 @@
 import React from "react";
+import {withRouter} from 'react-router-dom';
 
 
 
@@ -13,9 +14,15 @@ class SmallDisplay extends React.Component {
         this.wholeMouseLeaveHandler = this.wholeMouseLeaveHandler.bind(this);
         this.photoMouseEnterHandler = this.photoMouseEnterHandler.bind(this);
         this.photoMouseLeaveHandler = this.photoMouseLeaveHandler.bind(this);
-
+        this.playvideo = this.playvideo.bind(this);
     }
 
+
+    playvideo(){
+
+        let route = `/shows/${this.props.content.show_id}/${this.props.content.id}`;
+        this.props.history.push(route);
+    }
 
     wholeMouseEnterHandler(){
         this.setState({wholehover: true});
@@ -60,10 +67,10 @@ class SmallDisplay extends React.Component {
             <div className='smalldisplayanchor'>
                 <div onMouseEnter={this.wholeMouseEnterHandler} onMouseLeave={this.wholeMouseLeaveHandler} className={smallDisplayContainer}>
                     <div className={smalldisplayexpandable}>
-                        <div onMouseEnter={this.photoMouseEnterHandler} onMouseLeave={this.photoMouseLeaveHandler} className="smalldisplayimagecontainer">
+                        <div onClick={this.playvideo} onMouseEnter={this.photoMouseEnterHandler} onMouseLeave={this.photoMouseLeaveHandler} className="smalldisplayimagecontainer">
                             <img classname="smalldisplayimage" src={this.props.content.photoUrl} alt=""/>
                         </div>
-                        <div className={smalldisplayplaybuttoncontainer}>
+                        <div onClick={this.playvideo} className={smalldisplayplaybuttoncontainer}>
                             <div>
                                 <i className={materialicon}>play_arrow</i>
                             </div>
@@ -94,4 +101,4 @@ class SmallDisplay extends React.Component {
 }
 
 
-export default SmallDisplay;
+export default SmallDisplay = withRouter(SmallDisplay);

@@ -5,10 +5,9 @@ const EpisodesReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_ALL_EPISODES:
-            return action.episodes;
+            return merge({}, state, action.episodes);
         case RECEIVE_EPISODE:
             let newEpisode = { [action.episode.id]: action.episode };
-            debugger
             let newState = merge({}, state);
             return merge({}, newState, newEpisode);
         default: return state;

@@ -13,8 +13,8 @@ class SecondRow extends React.Component{
 
 
     componentDidMount(){
-
-        this.props.getEpisode(1).then(this.props.getEpisode(10).then(this.props.getEpisode(5).then(this.setState({mounted: true}))));
+        this.setState({mounted: true})
+        // this.props.getEpisode(1).then(this.props.getEpisode(10).then(this.props.getEpisode(5).then(this.props.getEpisode(3).then(this.props.getEpisode(11).then(this.props.getEpisode(4).then(this.props.getEpisode(5).then(this.props.getEpisode(2).then(this.setState({mounted: true})))))))));
     }
 
 
@@ -22,14 +22,15 @@ class SecondRow extends React.Component{
     render() {
         
         let episodes = this.props.episodes;
-        debugger
+
         let view = null;
         if(this.state.mounted){
+            episodes
             view = episodes.map ((episode) => {
                 return (<li key={episode.id}><SmallDisplay content={episode}/></li> )
             })
          }
-         debugger
+     
 
         return(
           

@@ -17,7 +17,12 @@ class ShowNav extends React.Component {
 
     }
 
+
+
     componentDidMount() {
+       if (!this.props.currentUser.id){
+            this.props.history.push('/splash');
+        } 
         window.addEventListener('scroll', this.scrollHandler);
     }
 
@@ -54,11 +59,16 @@ class ShowNav extends React.Component {
     }
 
     render() {
+        if (!this.props.currentUser.id) {
+            return null;
+        }
         let nameletter = this.props.currentUser.username[0].toUpperCase();
         let nameDropDown = null;
         if(this.state.hoverName){
             nameDropDown = <ul className="dropDown"><li className="showlogout" onClick={this.props.logoutUser} >Log Out</li></ul>
         }
+
+      
         return (
 
             <div className={this.state.navClass}  >

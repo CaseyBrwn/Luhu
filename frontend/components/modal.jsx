@@ -29,7 +29,7 @@ class Modal extends React.Component{
                 break
         case 'signup':
                 component = <SignUpFormContainer />
-            break
+                break
             default: return null;
         }
 

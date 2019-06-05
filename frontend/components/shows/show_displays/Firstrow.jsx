@@ -1,5 +1,6 @@
 import React from 'react';
 import DetailsButton from '../buttons/details_button';
+import {withRouter} from "react-router-dom";
 
 
 class FirstRowShow extends React.Component{
@@ -15,12 +16,17 @@ class FirstRowShow extends React.Component{
         this.handleMouseLeave = this.handleMouseLeave.bind(this);
         this.handleMousePictureenter = this.handleMousePictureenter.bind(this);
         this.handleMousePictureleave = this.handleMousePictureleave.bind(this);
+        this.playvideo = this.playvideo.bind(this);
         
     }
  
  
 
-
+    playvideo(){
+        debugger
+        let route = `/shows/${this.props.show.id}/${this.props.show.episode_ids[0]}`;
+         this.props.history.push(route);
+    }
 
     handleMousePictureenter(){
         setTimeout(() => {
@@ -41,6 +47,7 @@ class FirstRowShow extends React.Component{
     }
 
     handleMouseEnter(){
+        
         this.setState({ hover: true});
 
             
@@ -105,8 +112,8 @@ class FirstRowShow extends React.Component{
           
                 </div>
                 <img className={tallimage} src={this.props.show.tall_photoUrl} />
-                <div onMouseEnter={this.handleMousePictureenter} onMouseLeave={this.handleMousePictureleave} className="secondrowcontainer">
-                    <img className={firstrowimage} onHover={this.handleHover} src={this.props.show.photoUrl}/>
+                <div onClick={this.playvideo} onMouseEnter={this.handleMousePictureenter} onMouseLeave={this.handleMousePictureleave} className="secondrowcontainer">
+                    <img  className={firstrowimage}  src={this.props.show.photoUrl}/>
                     <i className={this.state.playhover}>play_arrow</i>
                 </div>
 
@@ -127,4 +134,4 @@ class FirstRowShow extends React.Component{
 
 }
 
-export default FirstRowShow;
+export default FirstRowShow = withRouter(FirstRowShow);

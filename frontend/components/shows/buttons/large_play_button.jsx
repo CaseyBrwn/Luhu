@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class LargePlayButton extends React.Component {
     constructor(props) {
@@ -20,11 +20,19 @@ class LargePlayButton extends React.Component {
         this.setState({ detailhover: false });
     }
     onClickHandler() {
-
-        let route = `/${this.props.type}/${this.props.ID}/play${episode.id}`;
-        < Redirect to={route} />
-
-
+    
+        if (this.props.content.show_id) {
+            let route = `/shows/${this.props.content.show_id}/${this.props.content.id}`;
+            this.props.history.push(route);
+        } else if (this.props.content.episode_ids){
+        
+            let route = `/shows/${this.props.content.id}/${this.props.content.episode_ids[0]}`;
+       
+            this.props.history.push(route);
+        }else{
+            let route = `/movies/${content.id}`;
+            this.props.history.push(route);
+        }
     }
 
     render() {
@@ -35,7 +43,7 @@ class LargePlayButton extends React.Component {
         }
         return (
 
-            <div className="largeplaybuttoncontainer" onMouseEnter={this.handledetailMouseEnter} onMouseLeave={this.handledetailMouseLeave}>
+            <div className="largeplaybuttoncontainer" onClick={this.onClickHandler} onMouseEnter={this.handledetailMouseEnter} onMouseLeave={this.handledetailMouseLeave}>
                 <div className={materialIcon}>play_circle_filled</div>
             </div>
              
@@ -47,4 +55,4 @@ class LargePlayButton extends React.Component {
 
 
 
-export default LargePlayButton;
+export default LargePlayButton = withRouter(LargePlayButton);

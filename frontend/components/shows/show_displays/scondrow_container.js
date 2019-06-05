@@ -5,7 +5,7 @@ import {getEpisode} from "../../../actions/content_actions";
 
 
 const msp = (state) => {
-    debugger
+
 
     let episodes = Object.values(state.entities.episodes);
 

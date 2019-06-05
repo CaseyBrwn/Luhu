@@ -1,0 +1,24 @@
+
+.playermastercontainer{
+    position: fixed; 
+  bottom: 3%;
+   right: 3%;
+  height: auto;
+  width: 30%;
+  background: rgba(12, 11, 11);
+  z-index: 1000;
+}
+
+.playermastercontainer{
+
+    position: fixed;
+ 
+
+
+}
+
+.videoplayer{
+    width: 100%;
+    height: 100%;
+
+}

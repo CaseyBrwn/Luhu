@@ -8,13 +8,18 @@ class ShowIndex extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            didmount: false
-        
+            didmount: false,
+            left: true 
         };
+        this.handleClick = this.handleClick.bind(this);
 
     }
 
     componentDidMount(){
+
+        if (!this.props.currentUser.id){ 
+            return null;
+        }
         this.props.getAllShows().then(
             ()=> {
                 this.props.getAllMovies().then(
@@ -24,9 +29,36 @@ class ShowIndex extends React.Component {
         );
     }
 
+    componentDidUpdate(prevProps){
+
+        if (prevProps.currentUser.id !== this.props.currentUser.id) {
+            this.props.getAllShows().then(
+                () => {
+                    this.props.getAllMovies().then(
+                        () => this.setState({ didmount: true })
+                    );
+                }
+            );
+        }
+    }
+
+    
+
+    handleClick(){
+        if(this.state.left === true){
+        this.setState({left: false});
+        }else{
+            this.setState({left: true});
+        }
+    }
+
 
 
     render() {
+
+        if (!this.props.currentUser.id) {
+            return null
+        }
         let shows = this.props.shows;
         let show4 = this.props.shows[3];
 
@@ -40,8 +72,19 @@ class ShowIndex extends React.Component {
         let firstRow = shows.map((show) => {
             return(<li className="rowli" key={show.id}><FirstRowShow show={show}/></li>)  
         })
+
+        let shiftableshowepisode = "shiftableshowepisode"
+        let arrow = <div className="arrowright">
+            <i onClick={this.handleClick} className="material-icons">keyboard_arrow_right</i>
+        </div>
+        if(!this.state.left){
+            shiftableshowepisode = "shiftableshowepisode2";
+            arrow = <div className="arrowleft">
+                <i onClick={this.handleClick} className="material-icons">keyboard_arrow_left</i>
+            </div>
+        }
     
-        // "https://www.hulu.com/press/wp-content/uploads/2018/04/THT_S2_MQ-1600x520.jpg"
+        
         return(
 
             <div className='indexbackground'>
@@ -50,8 +93,13 @@ class ShowIndex extends React.Component {
                     <ul className="firstrow">
                         {firstRow}
                     </ul>
+
+                   {arrow}
+                    
                     <ul className="showepisodedisplay">
-                        <SecondRow />
+                        <div className={shiftableshowepisode}>
+                            <SecondRow />
+                        </div>
                      </ul>
                     
                 </div>

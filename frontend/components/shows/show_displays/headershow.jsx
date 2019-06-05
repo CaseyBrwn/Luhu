@@ -35,7 +35,7 @@ class HeaderShow extends React.Component{
                     <li>
                         <ul className="topshow_nav">
                             <li>
-                                <LargePlayButton videoId={null} type={null} />
+                                <LargePlayButton content={this.props.show} />
                             </li>
                             <li>
                                 <div className="startWatch">START WATCHING</div>

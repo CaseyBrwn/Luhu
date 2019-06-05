@@ -53,7 +53,7 @@ class ShowShow extends React.Component {
                                     <li>
                                         <ul className="topheader_nav">
                                             <li className="showshowplay">
-                                                <LargePlayButton  videoId={null} type={null} />
+                                                <LargePlayButton  content={this.props.content} />
                                             </li>
                                             <li>
                                                 <div className="startWatch">START WATCHING</div>

@@ -21,6 +21,15 @@ class VideoShowPage extends React.Component {
         this.props.getShow(id).then(() => this.setState({ mounted: true }));
     }
 
+    componentDidUpdate(prevProps){
+        if (prevProps.match.params.showId !== this.props.match.params.showId) {
+            let videoId = this.props.match.params.episodeId;
+            this.props.getShow(id);
+        }
+
+
+    }
+
     handleexit(){
         this.props.history.push("/shows");
 

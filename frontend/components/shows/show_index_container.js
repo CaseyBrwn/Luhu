@@ -10,7 +10,8 @@ const msp = (state) => {
    
     return({
         shows: shows,
-        movies: movies
+        movies: movies,
+        currentUser: state.session
     });
 
 }

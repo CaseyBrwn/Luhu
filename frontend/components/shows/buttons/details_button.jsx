@@ -20,7 +20,7 @@ class DetailsButtons extends React.Component{
         this.setState({detailhover: false});
     }   
     onClickHandler(){
-        debugger
+     
         let type = "movies";
         if(this.props.content.episode_ids.length > 0){
             type = "shows";
