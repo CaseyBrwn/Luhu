@@ -70,6 +70,4 @@ class DetailsButtons extends React.Component{
 
 
 
-
-
 export default DetailsButtons = withRouter(DetailsButtons);

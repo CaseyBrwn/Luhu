@@ -10,10 +10,16 @@ const msp = (state, ownProps) => {
 
     let showid = ownProps.match.params.showId;
     let show = state.entities.shows[showid];
+    let episodes = null;
+    if(show){
+        episodes = show.episode_ids.map ((ids) => {
+            return (state.entities.episodes[ids]);
+        });
+    }
 
     return ({
         content: show,
-    
+        episodes: episodes
     });
 
 

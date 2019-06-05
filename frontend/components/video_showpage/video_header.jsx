@@ -23,15 +23,16 @@ class ShowShow extends React.Component {
                     <div className="midcontainer">
                         <div className="headersubcontainer">
                             <img className="headerimage" src="https://www.liveatthesummitofshreveportapts.com/blog/wp-content/uploads/sites/2563/2018/02/wpid-3.jpg" />
+                                {/* place holder until add square or side picture */}
                         </div>
                         <div className="headerbackgroundcolor">
                         </div>
                         
                     </div>
-                    <div className="showheaderHeader">
+                    {/* <div className="showheaderHeader">
                         <div className="showheadertitle">{this.props.content.title}</div>
                         <div className="showheaderclose">X</div>
-                    </div> 
+                    </div>  */}
                     <div className="headerinfoandpic">
                         <div className="tallphotoheaderbox">
                             <img className="tallphotoheader" src={this.props.content.tall_photoUrl} alt=""/>
@@ -57,9 +58,7 @@ class ShowShow extends React.Component {
                                             <li>
                                                 <div className="startWatch">START WATCHING</div>
                                             </li>
-                                        
                                             <li className="material-icons tn-3">add</li>
-
                                         </ul>
                                     </li>
                                 </ul>

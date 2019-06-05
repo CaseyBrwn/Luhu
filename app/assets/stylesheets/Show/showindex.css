@@ -3,7 +3,14 @@
 .splash{
    min-width: 1200px;
    position: absolute;
+   background-color: grey;
 
+}
+
+.indexbackground{
+   height: 180%;
+   width: 100%;
+   background-color: rgb(238, 237, 237);
 }
 
 
@@ -42,3 +49,14 @@
 
 }
 
+.showepisodedisplay{
+   position: absolute;
+   display: flex;
+   width: 90%;
+   top: 170%;
+   left: 5%;
+}
+
+.showepisodedisplay li{
+   margin: 3px;
+}

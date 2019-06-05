@@ -12,6 +12,7 @@ import MovieShowContainer from './video_showpage/movie_show_container';
 
 
 const App = () => (
+    
     <div className="maindiv">
         <Modal />
         <RestrictRoute exact path="/shows/:showId" component={ShowShowPageContainer} />
