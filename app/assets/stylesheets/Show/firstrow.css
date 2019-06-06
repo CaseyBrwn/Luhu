@@ -84,7 +84,7 @@
 }
 
 .firstrowcontainer2::after {
-  background-image: linear-gradient(rgb(13, 243, 186, .9),rgb(13, 243, 186, .9));
+  background-image: linear-gradient(rgba(13, 243, 186, .9),rgba(13, 243, 186, .9));
   display: block;
   position: relative;
   top: -101%;
@@ -249,7 +249,7 @@
     border: 3px solid rgb(255, 255, 255);
    border-radius: 50%;
    padding: .5px;
-   background-color: rgb(0, 0, 0, .5);
+   background-color: rgba(0, 0, 0, .5);
   
    z-index: -1;
 }
@@ -265,7 +265,7 @@
     border: 3px solid rgb(255, 255, 255);
    border-radius: 50%;
    padding: .5px;
-   background-color: rgb(0, 0, 0, .5);
+   background-color: rgba(0, 0, 0, .5);
    transition: font-size .25s;
 }
 
@@ -280,7 +280,7 @@
     border: 3px solid rgb(255, 255, 255);
    border-radius: 50%;
    padding: .5px;
-   background-color: rgb(0, 0, 0, .5);
+   background-color: rgba(0, 0, 0, .5);
     transition: font-size .25s;
 }
 
@@ -307,14 +307,14 @@
 
 .material-icons.bt-2{
    font-size: 50px;
-   border: 2px solid rgb(255, 255, 255, .5);
+   border: 2px solid rgba(255, 255, 255, .5);
    border-radius: 50%;
    padding: .5px;
 }
 
 .material-icons.bt-3{
    font-size: 40px;
-   border: 2px solid rgb(255, 255, 255, .5);
+   border: 2px solid rgba(255, 255, 255, .5);
    border-radius: 50%;
    padding: .5px;
 }
@@ -359,7 +359,7 @@ ___________________________ */
 }
 
 .firstrowcontainernature2::after {
-  background-image: linear-gradient(rgb(13, 243, 186, .9),rgb(13, 243, 186, .9));
+  background-image: linear-gradient(rgba(13, 243, 186, .9),rgba(13, 243, 186, .9));
   display: block;
   position: relative;
   top: -101%;
@@ -407,7 +407,7 @@ ___________________________ */
 }
 
 .firstrowcontainerhumans2::after {
-  background-image: linear-gradient(rgb(243, 13, 232, .9),rgb(243, 13, 232, .9));
+  background-image: linear-gradient(rgba(243, 13, 232, .9),rgba(243, 13, 232, .9));
   display: block;
   position: relative;
   top: -101%;
@@ -457,7 +457,7 @@ ___________________________ */
 }
 
 .firstrowcontainercities2::after {
-  background-image: linear-gradient(rgb(13, 113, 243, .9),rgb(13, 113, 243, .9));
+  background-image: linear-gradient(rgba(13, 113, 243, .9),rgba(13, 113, 243, .9));
   display: block;
   position: relative;
   top: -101%;
@@ -506,7 +506,7 @@ ___________________________ */
 }
 
 .firstrowcontainercats2::after {
-  background-image: linear-gradient(rgb(228, 243, 13, .9),rgba(228, 243, 13, 0.9));
+  background-image: linear-gradient(rgba(228, 243, 13, .9),rgba(228, 243, 13, 0.9));
   display: block;
   position: relative;
   top: -101%;
@@ -555,7 +555,7 @@ ___________________________ */
 }
 
 .firstrowcontainertopcars2::after {
-  background-image: linear-gradient(rgb(209, 209, 203, .9),rgb(209, 209, 203, .9));
+  background-image: linear-gradient(rgba(209, 209, 203, .9),rgba(209, 209, 203, .9));
   display: block;
   position: relative;
   top: -101%;
