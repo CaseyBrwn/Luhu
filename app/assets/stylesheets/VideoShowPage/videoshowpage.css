@@ -76,7 +76,7 @@ top: 0; left: 0; right: 0; bottom: 0;
     left: 6%;
     width: 87%;
     height: 50px;
-    border-bottom: 1px solid rgb(255, 255, 255, .5);
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
     z-index: 1;
     color: white;
     z-index: 2000;

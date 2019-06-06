@@ -68,12 +68,12 @@
 }
 
 .episodeNumber{
-    color: rgb(0, 0, 0, .5);
+    color: rgba(0, 0, 0, .5);
     font: 600 13px system-ui;
 }
 
 .episodeTitle{
-    color: rgb(0, 0, 0, .7);
+    color: rgba(0, 0, 0, .7);
     font: 400 20px system-ui;
 }
 
@@ -81,7 +81,7 @@
     width: 200px;
     height: 100px;
     padding-top: 10px;
-     color: rgb(0, 0, 0, 0);
+     color: rgba(0, 0, 0, 0);
     font: 600 12px system-ui;
   
 }
@@ -90,7 +90,7 @@
     width: 200px;
     height: 100px;
     padding-top: 10px;
-     color: rgb(0, 0, 0, .4);
+     color: rgba(0, 0, 0, .4);
     font: 600 12px system-ui;
     transition: all .5s
 }
