@@ -1,5 +1,7 @@
 import React from "react";
-import {withRouter} from 'react-router-dom';
+
+import {openModal} from '../../../actions/modal_actions';
+import {connect} from "react-redux";
 
 
 
@@ -20,8 +22,16 @@ class SmallDisplay extends React.Component {
 
     playvideo(){
 
-        let route = `/shows/${this.props.content.show_id}/${this.props.content.id}`;
-        this.props.history.push(route);
+        if (this.props.content.show_id) {
+            let info = ["show", this.props.content.id];
+            this.props.openModal(info);
+        } else if (this.props.content.episode_ids) {
+            let info = ["show", this.props.content.episode_ids[0]];
+            this.props.openModal(info);
+        } else {
+            let info = [movie, this.props.content.id];
+            this.props.history.push(info);
+        }
     }
 
     wholeMouseEnterHandler(){
@@ -68,7 +78,7 @@ class SmallDisplay extends React.Component {
                 <div onMouseEnter={this.wholeMouseEnterHandler} onMouseLeave={this.wholeMouseLeaveHandler} className={smallDisplayContainer}>
                     <div className={smalldisplayexpandable}>
                         <div onClick={this.playvideo} onMouseEnter={this.photoMouseEnterHandler} onMouseLeave={this.photoMouseLeaveHandler} className="smalldisplayimagecontainer">
-                            <img classname="smalldisplayimage" src={this.props.content.photoUrl} alt=""/>
+                            <img className="smalldisplayimage" src={this.props.content.photoUrl} alt=""/>
                         </div>
                         <div onClick={this.playvideo} className={smalldisplayplaybuttoncontainer}>
                             <div>
@@ -101,4 +111,15 @@ class SmallDisplay extends React.Component {
 }
 
 
-export default SmallDisplay = withRouter(SmallDisplay);
+const mdp = (dispatch) => {
+
+    return ({
+        openModal: (modal) => dispatch(openModal(modal))
+
+    })
+
+
+}
+
+
+export default (connect(null,mdp)(SmallDisplay));

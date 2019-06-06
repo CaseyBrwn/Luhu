@@ -1,5 +1,7 @@
 import React from "react";
 import { withRouter } from 'react-router-dom';
+import {connect} from "react-redux";
+import {openModal} from '../../../actions/modal_actions';
 
 class LargePlayButton extends React.Component {
     constructor(props) {
@@ -20,18 +22,16 @@ class LargePlayButton extends React.Component {
         this.setState({ detailhover: false });
     }
     onClickHandler() {
-    
+   
         if (this.props.content.show_id) {
-            let route = `/shows/${this.props.content.show_id}/${this.props.content.id}`;
-            this.props.history.push(route);
+            let info = ["show", this.props.id];
+          this.props.openModal(info);
         } else if (this.props.content.episode_ids){
-        
-            let route = `/shows/${this.props.content.id}/${this.props.content.episode_ids[0]}`;
-       
-            this.props.history.push(route);
+            let info = ["show", this.props.content.episode_ids[0]];
+            this.props.openModal(info);
         }else{
-            let route = `/movies/${content.id}`;
-            this.props.history.push(route);
+            let info = [movie, this.props.content.id];
+            this.props.history.push(info);
         }
     }
 
@@ -54,5 +54,16 @@ class LargePlayButton extends React.Component {
 }
 
 
+const mdp = (dispatch) => {
 
-export default LargePlayButton = withRouter(LargePlayButton);
+    return({
+        openModal: (modal) => dispatch(openModal(modal))
+
+    })
+
+
+}
+
+
+
+export default LargePlayButton = withRouter(connect(null, mdp)(LargePlayButton));

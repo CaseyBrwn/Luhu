@@ -5,12 +5,14 @@ import { withRouter } from 'react-router-dom';
 
 const msp = (state, ownProps) => {
 
-    let episodeId = ownProps.match.params.episodeId;
-
-    let video = state.entities.episodes[episodeId];
+    debugger
+    let videoId = ownProps.content[1];
+  
+    let video = state.entities.episodes[ownProps.content[1]] || {};
 
     return ({
-        video: video
+        video: video,
+        videoId: videoId
     });
 
 

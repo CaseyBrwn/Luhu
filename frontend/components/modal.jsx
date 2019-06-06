@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import LoginFormContainer from './splash/Form/login_form_container';
 import SignUpFormContainer from './splash/Form/signup_form_container';
 import {closeModal, openModal} from "../actions/modal_actions";
+import Videoplayer from './VideoPlayer/video_player_container';
 
 
 
@@ -15,23 +16,32 @@ class Modal extends React.Component{
     }
 
  
-
+    
 
     render() {
+        let component = null;
         if(!this.props.modal){
             return null;
         }
 
-        let component;
-        switch(this.props.modal) {
-            case 'login':
-                component = <LoginFormContainer />
-                break
-        case 'signup':
-                component = <SignUpFormContainer />
-                break
-            default: return null;
-        }
+        let modalbackground = "modal-background";
+
+        if(Array.isArray(this.props.modal)){
+            return <Videoplayer content={this.props.modal} />
+        
+
+        }else{
+            component;
+            switch(this.props.modal) {
+                case 'login':
+                    component = <LoginFormContainer />
+                    break
+            case 'signup':
+                    component = <SignUpFormContainer />
+                    break
+                default: return null;
+            }
+         }
 
 
     

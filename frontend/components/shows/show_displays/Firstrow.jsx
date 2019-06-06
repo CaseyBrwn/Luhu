@@ -1,6 +1,8 @@
 import React from 'react';
 import DetailsButton from '../buttons/details_button';
 import {withRouter} from "react-router-dom";
+import {openModal} from '../../../actions/modal_actions';
+import {connect} from "react-redux";
 
 
 class FirstRowShow extends React.Component{
@@ -23,9 +25,16 @@ class FirstRowShow extends React.Component{
  
 
     playvideo(){
-        debugger
-        let route = `/shows/${this.props.show.id}/${this.props.show.episode_ids[0]}`;
-         this.props.history.push(route);
+        if (this.props.show.show_id) {
+            let info = ["show", this.props.show.id];
+            this.props.openModal(info);
+        } else if (this.props.show.episode_ids) {
+            let info = ["show", this.props.show.episode_ids[0]];
+            this.props.openModal(info);
+        } else {
+            let info = [movie, this.props.content.id];
+            this.props.history.push(info);
+        }
     }
 
     handleMousePictureenter(){
@@ -134,4 +143,17 @@ class FirstRowShow extends React.Component{
 
 }
 
-export default FirstRowShow = withRouter(FirstRowShow);
+
+
+
+const mdp = (dispatch) => {
+
+    return ({
+        openModal: (modal) => dispatch(openModal(modal))
+
+    })
+
+
+}
+
+export default connect(null, mdp)(FirstRowShow);
