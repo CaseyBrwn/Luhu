@@ -118,7 +118,7 @@
     font-size: 50px;
     z-index: 150;
     color: white;
-    border: 3px solid rgb(255, 255, 255);
+    border: 3px solid rgba(255, 255, 255);
    border-radius: 50%;
    padding: .5px;
    background-color: rgb(0, 0, 0, .5);
@@ -134,10 +134,10 @@
     font-size: 50px;
     z-index: 150;
     color: white;
-    border: 3px solid rgb(255, 255, 255);
+    border: 3px solid rgba(255, 255, 255);
    border-radius: 50%;
    padding: .5px;
-   background-color: rgb(0, 0, 0, .5);
+   background-color: rgba(0, 0, 0, .5);
    transition: font-size .25s;
 }
 
@@ -152,6 +152,6 @@
     border: 3px solid rgb(255, 255, 255);
    border-radius: 50%;
    padding: .5px;
-   background-color: rgb(0, 0, 0, .5);
+   background-color: rgba(0, 0, 0, .5);
     transition: font-size .25s;
 }
