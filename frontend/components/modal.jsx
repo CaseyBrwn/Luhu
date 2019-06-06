@@ -28,8 +28,6 @@ class Modal extends React.Component{
 
         if(Array.isArray(this.props.modal)){
             return <Videoplayer content={this.props.modal} />
-        
-
         }else{
             component;
             switch(this.props.modal) {

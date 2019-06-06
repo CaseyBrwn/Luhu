@@ -1,46 +1,159 @@
 .videoplayer-background{
 position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
  background-color: black;
  z-index: 100000;
 }
-
-.videoplayer-background2{
-position: fixed;
-  top: 60%;
-  left: 60%;
-  width: 30%;
-  height: 30%;
- background-color: black;
- z-index: 100000;
-}
-
-.videoplayercontainer2{
-    position: absolute;
-     top:50%;
-   left:50%;
-   transform: translate(-50%, -50%);
-
-   width: 130%;
-   height: 130%;
-   z-index: 2000;
-
-}
-
-
 
 .videoplayercontainer{
+    position: absolute;
    width: 100%;
    height: 100%;
    z-index: 2000;
 }
 
+.videoplayer-background2{
+position: fixed;
+  bottom: 14px;
+  right: 20px;
+  width: 600px;
+    background-color: blue;
+  height: 330px;
+ z-index: 100000;
 
-.videoplayer2{
+}
+
+.videoplayercontainer2{
+  position: absolute;
+    top:50%;
+   left:50%;
+   transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
+   z-index: 2000;
+
+}
+
+
+.videoplayer{
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+ 
+    top: 50%;
+   left:50%;
+   transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.videoplayer2{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.VideoClose{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.browsebuttonposition{
+    position: absolute;
+    z-index: 2;
+    top:50%;
+   left:95%;
+   transform: translate(-50%, -50%);
+}
+
+
+
+.material-icons.vid2{
+    z-index: 101000000;
+   
+   
+}
+
+.VideoControlBar{
+    position: absolute;
+    top: 90%;
+    height: 10%;
+    width: 100%;
+}
+
+.VideoControlBar * {
+    color: rgba(255, 255, 255, .5);
+    
+    outline: none;
+    background: none;
+    border: none ;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:50%;
+}
+
+.material-icons.playPause{
+   left:50%;
+   font-size: 40px;
+}
+
+.material-icons.forwardten{
+   left:55%;
+   font-size: 40px;
+}
+.material-icons.backten{
+   left:45%;
+   font-size: 40px;
+}
+
+.Progressbarrdurration{
+    position: absolute;
+    z-index: 2;
+    top:0%;
+   left:40%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 5%;
+}
+
+.timeduration{
+    display: flex;
+    left: 115%;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+}
+
+.currenttime{
+    position: absolute;
+    top: 50%;
+   left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.fulltime{
+    position: absolute;
+       top: 50%;
+   left: 106%;
+    transform: translate(-50%, -50%);
+
+}
+
+.slash{
+position: absolute;
+       top: 50%;
+   left: 103%;
+    transform: translate(-50%, -50%);
+}
+
+.progressbar{
+    top:0%;
+    left: 56%;
+    width: 80%;
 
 }
