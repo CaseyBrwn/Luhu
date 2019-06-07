@@ -11,16 +11,31 @@ class Modal extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            modalChild: "modal-child"
+            mounted: false
         };
     }
 
  
+    componentDidMount(){
+ 
     
+
+    }
+
+    componentDidUpdate(){
+
+
+        if (this.state.mounted === false) {
+            setTimeout(() => {
+                this.setState({ mounted: true });
+            }, 1000);
+        }
+    }
 
     render() {
         let component = null;
-        if(!this.props.modal){
+        if(!this.props.modal && this.state.mounted){
+            this.setState({ mounted: false });
             return null;
         }
 
@@ -37,15 +52,23 @@ class Modal extends React.Component{
             case 'signup':
                     component = <SignUpFormContainer />
                     break
-                default: return null;
+                default: 
+              
+                return null;
             }
+         }
+
+
+         let modalchild = "modal-child";
+         if(this.state.mounted === true){
+             modalchild = "modal-child2";
          }
 
 
     
         return (
             <div className="modal-background" onClick={this.props.closeModal}>
-                <div className={this.state.modalChild} onClick={e => e.stopPropagation()}>
+                <div className={modalchild} onClick={e => e.stopPropagation()}>
                     {component}
                 </div>
             </div>

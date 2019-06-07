@@ -11,6 +11,14 @@
 
 .modal-child{
    position: absolute;
+    top: -1000px;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   transition: all .5s;
+}
+
+.modal-child2{
+     position: absolute;
     top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);

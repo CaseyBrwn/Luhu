@@ -34,7 +34,10 @@ class SessionForm extends React.Component{
 
     componentDidMount(){
         this.props.clearErrors();
-        this.setState({mounted: true});
+
+        
+        
+        
     }
 
 
@@ -44,7 +47,7 @@ class SessionForm extends React.Component{
     let sessionform = "sessionformfirst";
 
     if(this.state.mounted){
-        sessionform = "sessionfrom";
+        sessionform = "sessionform";
     }
 
         if (this.props.formType === 'Signup'){
@@ -68,6 +71,7 @@ class SessionForm extends React.Component{
             errors = <div className="formErrors">{this.props.errors[0]}</div>
         }
        
+
 
 
         return(
