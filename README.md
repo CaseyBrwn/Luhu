@@ -1,10 +1,11 @@
-# README
+# H1 Luhu
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Live Link](https://luhu.herokuapp.com)
 
-Things you may want to cover:
 
+
+
+OverView
 * Ruby version
 
 * System dependencies
