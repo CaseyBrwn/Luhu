@@ -567,3 +567,13 @@ ___________________________ */
   transition: all .4s;
  
 }
+
+
+.material-icons.bt-3{
+  position: relative;
+  top: 5px;
+  height: 80%;
+  font-size: 35px;
+
+}
+

@@ -16,15 +16,17 @@ class VideoShowPage extends React.Component {
 
 
     componentDidMount(){
+        
 
        let id = this.props.match.params.showId;
         this.props.getShow(id).then(() => this.setState({ mounted: true }));
     }
 
     componentDidUpdate(prevProps){
+
         if (prevProps.match.params.showId !== this.props.match.params.showId) {
             let videoId = this.props.match.params.episodeId;
-            this.props.getShow(id);
+            this.props.getShow(videoId);
         }
 
 
@@ -32,7 +34,6 @@ class VideoShowPage extends React.Component {
 
     handleexit(){
         this.props.history.push("/shows");
-
     }
 
 
@@ -41,7 +42,7 @@ class VideoShowPage extends React.Component {
 
 
     render(){
-
+       
         let header = null
         let smalldisplay = null
         if (this.props.content){
@@ -62,12 +63,12 @@ class VideoShowPage extends React.Component {
      
             return(
 
-                <div onClick={this.handleexit} className="videoshowPagebackground">
+                <div  className="videoshowPagebackground">
                     <div className="VideoHeight">
 
                     </div>
                     <div className="showheaderHeader">
-                        <div className="showheadertitle">TEST</div>
+                        <div className="showheadertitle">Luhu Original Show</div>
                         <div onClick={this.handleexit}className="showheaderclose">X</div>
                     </div> 
                     <div className="showpagecontainer">

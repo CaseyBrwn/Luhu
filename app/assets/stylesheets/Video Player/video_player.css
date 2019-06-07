@@ -61,6 +61,17 @@ position: fixed;
     position: absolute;
     top: 0;
     right: 0;
+    background: none;
+    border:none; 
+    cursor: pointer;
+    font-size: 30px;
+    margin: 10px;
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 100;
+    font-stretch: normal;
+    color: #797c83;
+    cursor: pointer;
+
 }
 
 .browsebuttonposition{
@@ -88,13 +99,14 @@ position: fixed;
 
 .VideoControlBar * {
     color: rgba(255, 255, 255, .5);
-    
+    cursor: pointer;
     outline: none;
     background: none;
     border: none ;
     position: absolute;
     transform: translate(-50%, -50%);
     top:50%;
+    cursor: pointer;
 }
 
 .material-icons.playPause{

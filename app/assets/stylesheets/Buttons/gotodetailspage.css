@@ -70,7 +70,7 @@
     width: 200px;
     height: 100%;
     top: -70%;
-   left: -120%;
+   left: -48%;
    opacity: 0;
    
 }
@@ -80,7 +80,7 @@
    height: 100%;
     width: 200px;
     top: -82%;
-   left: -121%;
+   left: -48%;
    opacity: 1;
   
    transition: all .25s;
@@ -112,7 +112,7 @@
 .material-icons.downarrow{
    color:  rgb(51, 48, 48) ;
    position: absolute;
-   left: 37%;
+   left: 19%;
    bottom: 0;
 
 }

@@ -14,27 +14,7 @@ class ShowShow extends React.Component {
 
     render() {
 
-   
-        if(this.props.content){
-            switch(this.props.content.id){
-                case 1:
-                    headerImagecontainer = "aqua";
-                    break;
-                case 2:
-                    headerImagecontainer = "purpleish";
-                    break;
-                case 3:
-                    headerImagecontainer = "blue";
-                    break;
-                case 4:
-                    headerImagecontainer = "yellow";
-                    break;
-                case 5:
-                    headerImagecontainer = "red";
-                    break;
-            }
-        }
-        
+ 
 
       
         return (

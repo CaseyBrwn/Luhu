@@ -97,6 +97,7 @@ class ShowIndex extends React.Component {
                    {arrow}
                     
                     <ul className="showepisodedisplay">
+                        
                         <div className={shiftableshowepisode}>
                             <SecondRow />
                         </div>
