@@ -14,18 +14,40 @@ class ShowShow extends React.Component {
 
     render() {
 
+   
+        if(this.props.content){
+            switch(this.props.content.id){
+                case 1:
+                    headerImagecontainer = "aqua";
+                    break;
+                case 2:
+                    headerImagecontainer = "purpleish";
+                    break;
+                case 3:
+                    headerImagecontainer = "blue";
+                    break;
+                case 4:
+                    headerImagecontainer = "yellow";
+                    break;
+                case 5:
+                    headerImagecontainer = "red";
+                    break;
+            }
+        }
+        
 
+      
         return (
            
-
+               
 
                 <div className="header_image_container">
                     <div className="midcontainer">
                         <div className="headersubcontainer">
-                            <img className="headerimage" src="https://www.liveatthesummitofshreveportapts.com/blog/wp-content/uploads/sites/2563/2018/02/wpid-3.jpg" />
+                            <img className="headerimage" src={this.props.content.square_photoUrl} />
                                 {/* place holder until add square or side picture */}
                         </div>
-                        <div className="headerbackgroundcolor">
+                    <div className="headerbackgroundcolor">
                         </div>
                         
                     </div>

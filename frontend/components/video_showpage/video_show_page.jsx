@@ -62,7 +62,7 @@ class VideoShowPage extends React.Component {
      
             return(
 
-                <div onclick={this.handleexit} className="videoshowPagebackground">
+                <div onClick={this.handleexit} className="videoshowPagebackground">
                     <div className="VideoHeight">
 
                     </div>

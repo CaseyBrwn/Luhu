@@ -18,5 +18,7 @@ class Show < ApplicationRecord
 
     has_one_attached :tall_photo
 
+    has_one_attached :square_photo
+
 
 end

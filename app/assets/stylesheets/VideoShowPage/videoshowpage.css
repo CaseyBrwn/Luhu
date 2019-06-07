@@ -46,6 +46,7 @@ top: 0; left: 0; right: 0; bottom: 0;
    left: 50%;
    transform: translate(-50%, -50%);
    z-index: 200;
+ 
 }
 
 .showpagecontainer-enter {
@@ -60,12 +61,15 @@ top: 0; left: 0; right: 0; bottom: 0;
 }
 
 .episodedisplay{
-    display: flex;
+  display: flex;
+    flex-wrap: wrap;
+    background-color: white;
 
 }
 
 .episodedisplay li{
     margin: 3px;
+    margin-bottom: 10px;
 }
 
 

@@ -6,8 +6,44 @@
    position: relative;
    width: 100%;
    height: 100%;
-   background-color: rgb(59, 161, 18);
-   border: 1px solid rgb(59, 161, 18);
+   background-color: rgb(13, 243, 186);
+   border: 1px solid rgb(13, 243, 186);
+}
+
+.header_image_container{
+    display: block;
+   position: relative;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(243, 13, 232);
+   border: 1px solid rgb(243, 13, 232);
+}
+
+.header_image_container{
+    display: block;
+   position: relative;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(13, 113, 243);
+   border: 1px solid rgb(13, 113, 243);
+}
+
+.header_image_container{
+    display: block;
+   position: relative;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(161, 139, 18);
+   border: 1px solid rgb(161, 139, 18);
+}
+
+.header_image_container{
+    display: block;
+   position: relative;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(13, 178, 243);
+   border: 1px solid rgb(13, 178, 243);
 }
 
 .headersubcontainer{
@@ -38,7 +74,7 @@
   display: block;
   position: absolute;
    top: 0;
-  background-image: linear-gradient(to left, transparent 0%,rgb(59, 161, 18) 100%);
+  background-image: linear-gradient(to left, transparent 0%,rgb(13, 178, 243) 100%);
 
   height: 100%;
   width: 100%;
@@ -56,18 +92,54 @@
    min-height: 500px;
 }
 
-.middlecolor{
+/* .middlecolor{
     position: absolute;
     left: 45%;
     height: 100px;
     width: 100%;
     background-color: rgb(59, 161, 18);
+} */
+
+.aqua{
+    position: absolute;
+    top: 0;
+    background-color: rgb(13, 243, 186);
+    height: 100%;
+    width: 50%;
+    z-index: -1;
 }
 
-.headerbackgroundcolor{
+.purpleish{
+    position: absolute;
+    top: 0;
+    background-color: rgb(243, 13, 232);
+    height: 100%;
+    width: 50%;
+    z-index: -1;
+}
+
+.blue{
+    position: absolute;
+    top: 0;
+    background-color: rgb(13, 113, 243);
+    height: 100%;
+    width: 50%;
+    z-index: -1;
+}
+
+.yellow{
     position: absolute;
     top: 0;
     background-color: rgb(59, 161, 18);
+    height: 100%;
+    width: 50%;
+    z-index: -1;
+}
+
+.red{
+    position: absolute;
+    top: 0;
+    background-color: rgb(255, 0, 0);
     height: 100%;
     width: 50%;
     z-index: -1;
