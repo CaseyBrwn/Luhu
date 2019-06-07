@@ -11,18 +11,20 @@
 
 .modal-child{
    position: absolute;
-    top: -1000px;
+    top: 33%;
    left: 50%;
    transform: translate(-50%, -50%);
    transition: all .5s;
+   opacity: 0;
 }
 
 .modal-child2{
      position: absolute;
-    top: 50%;
+    top: 45%;
    left: 50%;
    transform: translate(-50%, -50%);
    transition: all .5s;
+   opacity: 1;
 }
 
 .modal-child-enter {

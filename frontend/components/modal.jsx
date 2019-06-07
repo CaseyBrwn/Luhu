@@ -28,7 +28,7 @@ class Modal extends React.Component{
         if (this.state.mounted === false) {
             setTimeout(() => {
                 this.setState({ mounted: true });
-            }, 1000);
+            }, 200);
         }
     }
 
