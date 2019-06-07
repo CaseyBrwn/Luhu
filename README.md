@@ -17,10 +17,6 @@ Luhu is a clone of the popular show streaming service [Hulu](https://www.hulu.co
 #### Frontend
   * React.js with Redux
   
-#### Hosting
-  * Heroku
-  * AWS
-  
 ## Features
  
 #### Users Auth
@@ -39,6 +35,12 @@ Luhu is a clone of the popular show streaming service [Hulu](https://www.hulu.co
  #### Video Player
    * Users can minimize the current episodes to the corner of the screen and continue browsing site
    * Users can manipulate the video via multple custom functions that are
+   
+ #### Future Features
+   * Show and Episode Search by Title and Genere
+   * Browse by Genere 
+   * MyStuff users can add and remove episodes from their My Stuff page
+   * Additional Video Player Features
  
  
    
