@@ -10,6 +10,7 @@ class FirstRowShow extends React.Component{
         super(props);
         this.state = {
             hover: false,
+            firsthover: false,
             playhover: "material-icons fr-1",
             play: null,
             rowcontainer: `firstrowcontainer${["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"][Math.floor(Math.random() * 10 )]}`
@@ -56,17 +57,21 @@ class FirstRowShow extends React.Component{
     }
 
     handleMouseEnter(){
+        this.setState({firsthover: true})
+        setTimeout(() => {
+            if (this.state.firsthover) {
+                this.setState({ hover: true, playhover: "material-icons fr-2" });
+            }
+        }, 200);
         
-        this.setState({ hover: true});
 
-            
-        this.setState({ playhover: "material-icons fr-2" });
+
     
      
     }
 
     handleMouseLeave(){
-        this.setState({ hover: false, play: null, playhover: "material-icons fr-1"});
+        this.setState({ firsthover: false, hover: false, play: null, playhover: "material-icons fr-1"});
     }
 
     render(){

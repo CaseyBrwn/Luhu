@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 
 class ShowNav extends React.Component {
@@ -14,7 +15,8 @@ class ShowNav extends React.Component {
         this.onClickHandler = this.onClickHandler.bind(this);
         this.onMouseEnterHandler = this.onMouseEnterHandler.bind(this);
         this.onMouseLeaveHandler = this.onMouseLeaveHandler.bind(this);
-
+        this.mystuffclick = this.mystuffclick.bind(this);
+        this.handlehomeclick = this.handlehomeclick.bind(this);
     }
 
 
@@ -44,7 +46,14 @@ class ShowNav extends React.Component {
                             });
         }
     }
- 
+
+    handlehomeclick(){
+        this.props.history.push("/")
+    }
+
+    mystuffclick(){
+        this.props.history.push("/my-stuff")
+    }
 
     onClickHandler(e) {
         this.props.openModal(e.target.value);
@@ -72,7 +81,7 @@ class ShowNav extends React.Component {
         return (
 
             <div className={this.state.navClass}  >
-                <h1 className="luhu">luhu</h1>
+                <h1 onClick={this.handlehomeclick} className="luhu">luhu</h1>
                 <div className="navclickables">
                     <ul className="navleftcontainer ">
                         <li className={this.state.navcontainerli}>
@@ -82,11 +91,11 @@ class ShowNav extends React.Component {
                             <div className="navlefttext" >BROWSE</div>
                             
                         </li>
-                        <li className={this.state.navcontainerli}>
+                        <li onClick={this.mystuffclick} className={this.state.navcontainerli}>
                             <div className="checkicon">
                                 <i className="material-icons md-18" >done</i>
                             </div>
-                            <div className="navlefttext2">MY STUFF</div> 
+                            <div  className="navlefttext2">MY STUFF</div> 
                         </li>
                     </ul>
                     <ul className="showclick">
