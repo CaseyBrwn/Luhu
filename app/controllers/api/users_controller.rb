@@ -4,6 +4,7 @@ class Api::UsersController < ApplicationController
         @user = User.create(user_params)
         if @user.save
             login(@user)
+            @user.includes(:shows)
             render :show
         else
            

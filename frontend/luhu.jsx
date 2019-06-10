@@ -25,6 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //Test Started
+    window.Con_Actions = Con_Actions;
+
+    window.createUserShow =  Con_Actions.createUserShow;
+    window.deleteUserShow = Con_Actions.deleteUserShow;
     window.getEpisode = Con_Actions.getEpisode;
     window.getAllShows = Con_Actions.getAllShows;
     window.getShow = Con_Actions.getShow;

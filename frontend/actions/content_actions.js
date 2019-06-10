@@ -4,6 +4,8 @@ export const RECEIVE_ALL_MOVIES = "RECEIVE_ALL_MOVIES";
 export const RECEIVE_MOVIE = "RECEIVE_MOVIE";
 export const RECEIVE_EPISODE = "RECEIVE_EPISODE";
 export const RECEIVE_ALL_EPISODES = "RECEIVE_EPISODES";
+export const RECEIVE_USER_SHOW = 'RECEIVE_USER_SHOW';
+export const REMOVE_USER_SHOW = "REMOVE_USER_SHOW";
 import * as ContentUtil from '../util/content_api_util';
 
 
@@ -37,6 +39,16 @@ const receiveMovie = (movie) => ({
     movie: movie
 });
 
+const receiveUserShow = (my_show) => ({
+    type: RECEIVE_USER_SHOW,
+    my_show: my_show
+})
+
+const removeUserShow = (my_show) => ({
+    type: REMOVE_USER_SHOW,
+    my_show: my_show
+})
+
 export const getEpisode = (id) => (dispatch) => (
     ContentUtil.fetchEpisode(id).then((episode)=>dispatch(receiveEpisode(episode)))
 );
@@ -58,3 +70,13 @@ export const getAllMovies = () => (dispatch) => (
 export const getMovie = (id) => (dispatch) => (
     ContentUtil.fetchMovie(id).then((movie) => dispatch(receiveMovie(movie)))
 );
+
+export const createUserShow = (show_id) => dispatch =>{
+    return(
+    ContentUtil.addMyStuff(show_id).then((my_show) => dispatch(receiveUserShow(my_show)))
+    )
+}
+
+export const deleteUserShow = (show_id) => dispatch => (
+    ContentUtil.removeMyStuff(show_id).then((my_show) => dispatch(removeUserShow(my_show)))
+)
