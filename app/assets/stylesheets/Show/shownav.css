@@ -39,6 +39,7 @@
   margin: 29px;
   margin-left: 55px;
   font-family: 'Nunito', sans-serif;
+  cursor: pointer;
 }
 
 .searchNav{
@@ -48,6 +49,7 @@
     justify-content: center;
     align-content: center;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .navclickables{
@@ -94,6 +96,7 @@
 .textSearch{
     position: relative;
     top: 5px;
+    cursor: pointer;
     
 }
 
@@ -101,11 +104,13 @@
     width: 75px;
     position: relative;
     top: 4px;
+    cursor: pointer;
 }
 
 .browseIcon{
     position: relative;
     top: 1px;
+    cursor: pointer;
 }
 
 .navlefttext2{
@@ -113,6 +118,7 @@
     position: relative;
     top: 1px;
     left: -4px;
+    cursor: pointer;
 }
 
 .checkicon{
@@ -122,6 +128,7 @@
      padding-left: 5px;
      padding-right: 5px;
      padding-top: 1px;
+     cursor: pointer;
      
 }
 .material-icons.md-18 { 
@@ -214,6 +221,7 @@
     width: 100px;
     height: 100px;
     align-content: center;
+    cursor: pointer;
 }
 
 .showlogout{
