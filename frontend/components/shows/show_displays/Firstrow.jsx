@@ -3,6 +3,7 @@ import DetailsButton from '../buttons/details_button';
 import {withRouter} from "react-router-dom";
 import {openModal} from '../../../actions/modal_actions';
 import {connect} from "react-redux";
+import MyStuffButton from "../buttons/mystuff_button";
 
 
 class FirstRowShow extends React.Component{
@@ -116,7 +117,7 @@ class FirstRowShow extends React.Component{
             description = "firstrowdescription2";
             footer = <div className="bottombuttons">
                 <li><DetailsButton color="white" content={this.props.show}/></li>
-                <li className="material-icons bt-3">add</li>
+                <li><MyStuffButton color="white" content={this.props.show} /></li>
             </div>
         }
    

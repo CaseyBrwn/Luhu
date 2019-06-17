@@ -1,7 +1,8 @@
 .smalldisplayanchor{
     position: relative;
-    width: auto;
-    height: auto;
+   
+    height: 229x;
+    width: 300px;
 }
 
 
@@ -79,20 +80,31 @@
 
 .episodeDescription{
     width: 200px;
-    height: 100px;
+    height: 60px;
     padding-top: 10px;
      color: rgba(0, 0, 0, 0);
     font: 600 12px system-ui;
+    overflow: hidden;
   
 }
 
 .episodeDescription2{
     width: 200px;
-    height: 100px;
+    height: 60px;
     padding-top: 10px;
      color: rgba(0, 0, 0, .4);
     font: 600 12px system-ui;
-    transition: all .5s
+    transition: all .5s;
+    overflow: hidden;
+}
+
+.bottombuttonssmall{
+  position: absolute;
+  display: flex;
+  bottom: -60px;
+  left: -10px;
+  padding: 3%;
+  z-index: 5;
 }
 
 .smalldisplayplaybuttoncontainer{

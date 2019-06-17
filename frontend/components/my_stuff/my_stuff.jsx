@@ -1,8 +1,10 @@
 import React from "react";
+import SmallDisplay from "../shows/show_displays/smalldisplay";
 
 class MyStuff extends React.Component{
     constructor(props){
         super(props)
+    
     }
 
 
@@ -14,6 +16,11 @@ class MyStuff extends React.Component{
 
     render(){
 
+
+        let favshows = this.props.myShows.map((show) => {
+       
+            return <li className="Mystuffli" key={show.id}><SmallDisplay content={show} /></li>
+        })
         
 
         return(
@@ -28,8 +35,8 @@ class MyStuff extends React.Component{
                     </div>
                 </div>
                 <div className="myshowscontainer">
-                    
-
+                    <div className="TVSHOWS">TV SHOWS</div>
+                    <div className="ShowsContainer">{favshows}</div>
                 </div>
                 
             

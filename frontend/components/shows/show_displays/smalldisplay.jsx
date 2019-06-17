@@ -2,6 +2,8 @@ import React from "react";
 
 import {openModal} from '../../../actions/modal_actions';
 import {connect} from "react-redux";
+import DetailsButton from "../buttons/details_button";
+import MyStuffButton from "../buttons/mystuff_button";
 
 
 
@@ -59,6 +61,8 @@ class SmallDisplay extends React.Component {
         let episodeDescription = "episodeDescription";
         let materialicon = "material-icons ds-1";
         let smalldisplayplaybuttoncontainer = "smalldisplayplaybuttoncontainer";
+        let smallcontent = null;
+        let buttons = null;
 
         if(this.state.wholehover){
             smallDisplayContainer = "SmallDisplayContainer2";
@@ -71,6 +75,18 @@ class SmallDisplay extends React.Component {
         if(this.state.photohover){
             materialicon = "material-icons ds-3";
         }
+
+        if (this.props.content.show_id) {
+             smallcontent = 
+                <li className="episodeNumber">EPISODE {this.props.content.episode_number}</li>
+        }else {
+   
+           buttons =  <div className="bottombuttonssmall">
+                <li><DetailsButton color="black" content={this.props.content} /></li>
+                <li><MyStuffButton color="black" content={this.props.content} /></li>
+            </div>
+        }
+      
     
 
         return(
@@ -87,13 +103,15 @@ class SmallDisplay extends React.Component {
                         </div>
                         <div className="smalldisplaycontent">
                             <ul className="smalldisplayUL">
-                                <li className="episodeNumber">EPISODE {this.props.content.episode_number}</li>
+                                {smallcontent}
                                 <li className="episodeTitle">{this.props.content.title}</li>
                                 <li className={episodeDescription}>{this.props.content.description}</li>
-                                
+                                <li>{buttons}</li>
                             </ul>
-
+                            
+                          
                         </div>
+
                     </div>
                 </div>
             </div>

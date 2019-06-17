@@ -6,7 +6,7 @@ import myStuff from './my_stuff';
 const msp = (state) => {
 
     let shows = Object.values(state.entities.shows)
-    let myShows = shows.filter((show)=> Object.values(state.entities.users)[0].show_ids.includes(show.id)) || {}
+    let myShows = shows.filter((show)=> Object.values(state.entities.users)[0].show_ids.includes(show.id)) || []
 
     return({
         myShows: myShows

@@ -76,7 +76,7 @@ class MyShowButton extends React.Component{
                             <div className="gotodetails">Remove from MyStuff</div>
                         </div>
                         <div className="material-icons downarrowcontainer">
-                            <div className="material-icons downarrow">check</div>
+                            <div className="material-icons downarrow">arrow_drop_down</div>
                         </div>
                     </div>
                 </div>

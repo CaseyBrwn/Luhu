@@ -18,7 +18,8 @@ const App = () => (
         <Modal />
         <RestrictRoute exact path="/shows/:showId" component={ShowShowPageContainer} />
         <RestrictRoute exact path="/movies/:movieId" component={MovieShowContainer} />
-        <Route path="/" component={ShowNavBar} />
+        <Route exact path="/" component={ShowNavBar} />
+        <Route exact path="/my-stuff" component={ShowNavBar} />
         <Route path="/" component={ShowsIndexContainer}/>
         <Route path="/my-stuff" component={mystuff} />
         <AuthRoute exact path="/splash/signup" component={SignupFormContainer} />

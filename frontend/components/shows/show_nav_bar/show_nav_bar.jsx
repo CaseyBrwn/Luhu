@@ -24,9 +24,12 @@ class ShowNav extends React.Component {
     componentDidMount() {
        if (!this.props.currentUser.id){
             this.props.history.push('/splash');
+           
         } 
+        this.scrollHandler()
         window.addEventListener('scroll', this.scrollHandler);
     }
+    
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.scrollHandler);
@@ -34,7 +37,7 @@ class ShowNav extends React.Component {
 
     scrollHandler() {
         let pos = window.pageYOffset;
-        if (pos === 0) {
+        if (pos === 0 && this.props.showpage) {
             this.setState({ navClass: "shownav", 
                             userletterempty: 'userletterempty',
                             navcontainerli: 'navcontainerli'
