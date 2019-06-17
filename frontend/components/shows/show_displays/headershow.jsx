@@ -1,6 +1,7 @@
 import React from 'react';
 import DetailsButton from '../buttons/details_button';
 import LargePlayButton from '../buttons/large_play_button';
+import MyStuffButton from '../buttons/mystuff_button';
 
 
 class HeaderShow extends React.Component{
@@ -42,9 +43,10 @@ class HeaderShow extends React.Component{
                             </li>
                             <li>
                                 <DetailsButton color="white" content={this.props.show}/>
+                            </li >
+                            <li>
+                            <MyStuffButton  color="white" content={this.props.show}/>
                             </li>
-                            <li className="material-icons tn-3">add</li>
-
                         </ul>
                     </li>
                 </ul>

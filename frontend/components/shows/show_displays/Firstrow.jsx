@@ -3,6 +3,7 @@ import DetailsButton from '../buttons/details_button';
 import {withRouter} from "react-router-dom";
 import {openModal} from '../../../actions/modal_actions';
 import {connect} from "react-redux";
+import MyStuffButton from "../buttons/mystuff_button";
 
 
 class FirstRowShow extends React.Component{
@@ -10,6 +11,7 @@ class FirstRowShow extends React.Component{
         super(props);
         this.state = {
             hover: false,
+            firsthover: false,
             playhover: "material-icons fr-1",
             play: null,
             rowcontainer: `firstrowcontainer${["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"][Math.floor(Math.random() * 10 )]}`
@@ -56,17 +58,21 @@ class FirstRowShow extends React.Component{
     }
 
     handleMouseEnter(){
+        this.setState({firsthover: true})
+        setTimeout(() => {
+            if (this.state.firsthover) {
+                this.setState({ hover: true, playhover: "material-icons fr-2" });
+            }
+        }, 200);
         
-        this.setState({ hover: true});
 
-            
-        this.setState({ playhover: "material-icons fr-2" });
+
     
      
     }
 
     handleMouseLeave(){
-        this.setState({ hover: false, play: null, playhover: "material-icons fr-1"});
+        this.setState({ firsthover: false, hover: false, play: null, playhover: "material-icons fr-1"});
     }
 
     render(){
@@ -111,7 +117,7 @@ class FirstRowShow extends React.Component{
             description = "firstrowdescription2";
             footer = <div className="bottombuttons">
                 <li><DetailsButton color="white" content={this.props.show}/></li>
-                <li className="material-icons bt-3">add</li>
+                <li><MyStuffButton color="white" content={this.props.show} /></li>
             </div>
         }
    

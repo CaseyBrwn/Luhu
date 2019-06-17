@@ -12,6 +12,9 @@
 class Show < ApplicationRecord
     validates :title, :description, presence: true
 
+    has_many :user_shows
+    has_many :users, through: :users_shows
+
     has_many :episodes
 
     has_one_attached :photo

@@ -1,0 +1,92 @@
+.myStuffcontainer{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 240%;
+    background-color: white;
+    z-index:  5;
+
+}
+
+.mystuffbanner{
+    width: 100%;
+    height: 290px;
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mystuffbannercontent{
+    position: relative;
+    top: 40px;
+    margin: 50px;
+    width: 100%;
+
+}
+
+
+.Mystufftitle{
+    padding-bottom: 10px;
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+.mystuffsmalltext{
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.mystuffsmalltext div{
+    margin: 4px;
+}
+
+.material-icons.mystuff{
+    font-weight: 100;
+    position: relative;
+    top: -5px;
+    border: 1px solid black;
+   border-radius: 50%;
+   padding: .5px;
+}
+
+.myshowscontainer{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+     top:2%;
+    left: 3%;
+   width: 94%;
+
+    list-style-type: none;
+    display: flex;
+    
+}
+
+.ShowsContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Mystuffli{
+    height: 229px;
+    width: 300 px;
+    margin: 5px;
+}
+
+.TVSHOWS{
+    font-size: 18px;
+     font-family: 'Roboto', sans-serif;
+     font-weight: 900;
+     margin-bottom: 20px;
+}
+
