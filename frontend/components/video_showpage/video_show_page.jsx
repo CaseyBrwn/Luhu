@@ -33,7 +33,7 @@ class VideoShowPage extends React.Component {
     }
 
     handleexit(){
-        this.props.history.push("/shows");
+        this.props.history.push("/");
     }
 
 
