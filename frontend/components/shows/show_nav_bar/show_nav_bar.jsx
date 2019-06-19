@@ -10,7 +10,8 @@ class ShowNav extends React.Component {
             userletterempty: 'userletterempty',
             navcontainerli: 'navcontainerli',
             hoverName: false,
-            hoverBrowse: false
+            hoverBrowse: false,
+            browseChange: "genrebox"
         };
         this.scrollHandler = this.scrollHandler.bind(this);
         this.onClickHandler = this.onClickHandler.bind(this);
@@ -19,7 +20,8 @@ class ShowNav extends React.Component {
         this.mystuffclick = this.mystuffclick.bind(this);
         this.handlehomeclick = this.handlehomeclick.bind(this);
         this.onMouseEnterBrowseHandler = this.onMouseEnterBrowseHandler.bind(this);
-        this.onMouseLeaveBrowseHandler = this.onMouseLeaveBrowseHandler.bind(this)
+        this.onMouseLeaveBrowseHandler = this.onMouseLeaveBrowseHandler.bind(this);
+        this.handleClickBrowse = this.handleClickBrowse.bind(this);
     }
 
 
@@ -32,6 +34,10 @@ class ShowNav extends React.Component {
         window.addEventListener('scroll', this.scrollHandler);
         this.props.getAllGenres();
     }
+    componentDidUpdate(prevProps){
+        if (this.props.showpage!== prevProps.showpage) this.scrollHandler();
+    }
+    
     
 
     componentWillUnmount() {
@@ -51,6 +57,10 @@ class ShowNav extends React.Component {
                             navcontainerli: 'navcontainerli2'
                             });
         }
+    }
+
+    handleClickBrowse(id){
+        this.props.history.push(`/genres/${id}`)
     }
 
     handlehomeclick(){
@@ -75,10 +85,13 @@ class ShowNav extends React.Component {
 
     onMouseEnterBrowseHandler(){
         this.setState({hoverBrowse: true})
+        setTimeout(() => {
+            this.setState({ browseChange: "genrebox2"})
+        }, 1);
     }
 
     onMouseLeaveBrowseHandler() {
-        this.setState({ hoverBrowse: false })
+        this.setState({ hoverBrowse: false, browseChange: "genrebox"})
     }
 
     render() {
@@ -92,15 +105,18 @@ class ShowNav extends React.Component {
         }
         let genresList = null;
         let genresitems = null;
- 
+        let genrebox = "genrebox"
+
          if(this.state.hoverBrowse){
+           
+           
              genresitems = (
                  this.props.genres.map((genre) => {
                      return (<div key={genre.id} onClick={() => this.handleClickBrowse(genre.id)}>{genre.genre_type}</div>)
                  })
              )
             genresList = (
-                <div className="genrebox">
+                <div className={this.state.browseChange}>
                     <div className="genreleft"></div>
                     <div className="genrelist">
                          {genresitems}

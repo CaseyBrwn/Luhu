@@ -11,6 +11,7 @@ import { ShowShowPageContainer} from './video_showpage/show_show_container';
 import MovieShowContainer from './video_showpage/movie_show_container';
 import {Route} from 'react-router-dom';
 import mystuff from './my_stuff/my_stuff_container'; 
+import genresContainer from './genres/genres_container';
 
 
 const App = () => (
@@ -18,10 +19,10 @@ const App = () => (
         <Modal />
         <RestrictRoute exact path="/shows/:showId" component={ShowShowPageContainer} />
         <RestrictRoute exact path="/movies/:movieId" component={MovieShowContainer} />
-        <Route exact path="/" component={ShowNavBar} />
-        <Route exact path="/my-stuff" component={ShowNavBar} />
+        <Route  path="/" component={ShowNavBar} />
         <Route path="/" component={ShowsIndexContainer}/>
         <Route path="/my-stuff" component={mystuff} />
+        <Route path="/genres/:genreId" component={genresContainer} />
         <AuthRoute exact path="/splash/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/splash/login" component={LoginFormContainer} />
         <AuthRoute exact path="/splash/signup" component={SignupFormContainer} />

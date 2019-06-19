@@ -118,21 +118,62 @@
     flex-direction: row;
     position: absolute;
     top: 75px;
-    left: -8vw;
-    width: 90vw;
+    left: -40%;
+    width: 620%;
     height: 300px;
     background-color: white;
     color: black;
     padding: 20%;
 }
 
+.genrebox{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 75px;
+    left: -40%;
+    width: 620%;
+    height: 0px;
+    background-color: white;
+    color: black;
+    padding: 20%;
+    transition: height .5s;
+      overflow: hidden
+}
+
+.genrebox2{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 75px;
+    left: -40%;
+    width: 620%;
+    height: 300px;
+    background-color: white;
+    color: black;
+    padding: 20%;
+    transition: height .5s;
+    overflow: hidden;
+}
+
 
 .genrelist{
+    position: relative;
+    width: 400px;
+    height: 310px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin-left: 4%;
-    font-size: 
+    font-size: 15px;
+
+}
+
+.genrelist div{
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
 }
 
 .genreleft{
