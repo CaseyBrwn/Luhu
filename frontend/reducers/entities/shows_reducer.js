@@ -6,7 +6,8 @@ const ShowsReducer = (state = {}, action) => {
     Object.freeze(state);
     switch(action.type){
         case RECEIVE_ALL_SHOWS:
-            return action.shows;
+            let newState2 = merge({}, state)
+            return merge({}, newState2, action.shows)
         case RECEIVE_SHOW:
             let newShow = {[action.show.id]: action.show};
             let newState = merge({} , state);

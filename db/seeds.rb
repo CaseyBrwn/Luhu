@@ -126,3 +126,39 @@ file40 = open("https://luhu-seeds.s3.amazonaws.com/car1.jpg")
 episode13.photo.attach(io: file40, filename: 'car1.jpg')
 file41 = open("https://luhu-seeds.s3.amazonaws.com/car1.mp4")
 episode13.video.attach(io: file41, filename: 'car1.mp4')
+
+
+Genre.create(genre_type: "Action")
+Genre.create(genre_type: "Adventure")
+Genre.create(genre_type: "Comedy")
+Genre.create(genre_type: "Documentaries")
+Genre.create(genre_type: "Drama")
+Genre.create(genre_type: "History")
+Genre.create(genre_type: "Horror")
+Genre.create(genre_type: "International")
+Genre.create(genre_type: "Mystery")
+Genre.create(genre_type: "Romance")
+Genre.create(genre_type: "Science Fiction")
+Genre.create(genre_type: "Sports")
+Genre.create(genre_type: "Thriller")
+
+GenresJoin.create(show_id: 1, genre_id: 2)
+GenresJoin.create(show_id: 1, genre_id: 4)
+GenresJoin.create(show_id: 1, genre_id: 8)
+
+GenresJoin.create(show_id: 2, genre_id: 3)
+GenresJoin.create(show_id: 2, genre_id: 5)
+
+GenresJoin.create(show_id: 3, genre_id: 4)
+GenresJoin.create(show_id: 3, genre_id: 6)
+GenresJoin.create(show_id: 3, genre_id: 8)
+
+GenresJoin.create(show_id: 4, genre_id: 10)
+GenresJoin.create(show_id: 4, genre_id: 13)
+
+GenresJoin.create(show_id: 5, genre_id: 1)
+GenresJoin.create(show_id: 5, genre_id: 2)
+GenresJoin.create(show_id: 5, genre_id: 8)
+GenresJoin.create(show_id: 5, genre_id: 13)
+
+

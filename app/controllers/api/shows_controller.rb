@@ -1,7 +1,7 @@
 class Api::ShowsController < ApplicationController
 
     def index
-        @shows = Show.includes(:episodes).with_attached_photo
+        @shows = Show.includes(:episodes, :genres).with_attached_photo
         render :index
     end
 

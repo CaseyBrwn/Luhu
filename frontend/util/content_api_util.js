@@ -54,3 +54,18 @@ export const removeMyStuff = (show_id) => (
     })
 )
 
+export const fetchAllGenres = () => (
+    $.ajax({
+        method: "GET",
+        url: `/api/genres`
+    })
+)
+
+export const fetchGenre = (genre_id) => (
+    $.ajax({
+        method: "GET",
+        url: `/api/genres/${genre_id}`
+    })
+)
+
+

@@ -9,7 +9,8 @@ class ShowNav extends React.Component {
             navClass: "shownav",
             userletterempty: 'userletterempty',
             navcontainerli: 'navcontainerli',
-            hoverName: false
+            hoverName: false,
+            hoverBrowse: false
         };
         this.scrollHandler = this.scrollHandler.bind(this);
         this.onClickHandler = this.onClickHandler.bind(this);
@@ -17,6 +18,8 @@ class ShowNav extends React.Component {
         this.onMouseLeaveHandler = this.onMouseLeaveHandler.bind(this);
         this.mystuffclick = this.mystuffclick.bind(this);
         this.handlehomeclick = this.handlehomeclick.bind(this);
+        this.onMouseEnterBrowseHandler = this.onMouseEnterBrowseHandler.bind(this);
+        this.onMouseLeaveBrowseHandler = this.onMouseLeaveBrowseHandler.bind(this)
     }
 
 
@@ -24,10 +27,10 @@ class ShowNav extends React.Component {
     componentDidMount() {
        if (!this.props.currentUser.id){
             this.props.history.push('/splash');
-           
         } 
         this.scrollHandler()
         window.addEventListener('scroll', this.scrollHandler);
+        this.props.getAllGenres();
     }
     
 
@@ -70,6 +73,14 @@ class ShowNav extends React.Component {
         this.setState({ hoverName: false});
     }
 
+    onMouseEnterBrowseHandler(){
+        this.setState({hoverBrowse: true})
+    }
+
+    onMouseLeaveBrowseHandler() {
+        this.setState({ hoverBrowse: false })
+    }
+
     render() {
         if (!this.props.currentUser.id) {
             return null;
@@ -79,6 +90,11 @@ class ShowNav extends React.Component {
         if(this.state.hoverName){
             nameDropDown = <ul className="dropDown"><li className="showlogout" onClick={this.props.logoutUser} >Log Out</li></ul>
         }
+        let genresList = null;
+         if(this.state.hoverBrowse)
+            genresList = this.props.genres.map((genres) => {
+            return <div id={genres.id}>{genres.genres_type}</div>
+        })
 
       
         return (
@@ -87,11 +103,12 @@ class ShowNav extends React.Component {
                 <h1 onClick={this.handlehomeclick} className="luhu">luhu</h1>
                 <div className="navclickables">
                     <ul className="navleftcontainer ">
-                        <li className={this.state.navcontainerli}>
+                        <li onMouseEnter={this.onMouseEnterBrowseHandler} onMouseLeave={this.onMouseLeaveBrowseHandler} className={this.state.navcontainerli}>
                             <div className="browseIcon">
                                 <i className="material-icons">reorder</i>
                             </div>
                             <div className="navlefttext" >BROWSE</div>
+                            {genresList}
                             
                         </li>
                         <li onClick={this.mystuffclick} className={this.state.navcontainerli}>

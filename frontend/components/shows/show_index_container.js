@@ -21,6 +21,7 @@ const mdp = (dispatch) => {
     return ({
         getAllShows: () => dispatch(getAllShows()),
         getAllMovies: () => dispatch(getAllMovies()),
+        // getAllGenres: () => dispatch(getAllGenres()),
         logoutUser: () => dispatch(logoutUser())
     });
 

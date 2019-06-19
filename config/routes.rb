@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :episodes, only: [:show]
     resources :movies, only: [:index, :show]
     resources :usershows, only: [:create, :destroy]
+    resources :genres, only: [:index, :show]
   end
 
 end

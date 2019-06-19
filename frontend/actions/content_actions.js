@@ -6,6 +6,7 @@ export const RECEIVE_EPISODE = "RECEIVE_EPISODE";
 export const RECEIVE_ALL_EPISODES = "RECEIVE_EPISODES";
 export const RECEIVE_USER_SHOW = 'RECEIVE_USER_SHOW';
 export const REMOVE_USER_SHOW = "REMOVE_USER_SHOW";
+export const RECEIVE_ALL_GENRES = "RECEIVE_ALL_GENRES"
 import * as ContentUtil from '../util/content_api_util';
 
 
@@ -48,6 +49,27 @@ const removeUserShow = (my_show) => ({
     type: REMOVE_USER_SHOW,
     my_show: my_show
 })
+
+const receiveAllGenres = (genres) => ({
+    type: RECEIVE_ALL_GENRES,
+    genres: genres
+})
+
+const receiveGenre = (genre) => ({
+    type: RECEIVE_GENRE,
+    genre: genre
+})
+
+export const getGenre = (id) => (dispatch) => {
+    ContentUtil.fetchGenre().then((res) => {
+        dispatch(receiveGenre(res.genre));
+        dispatch(receiveAllShows(res.shows))
+    })
+}
+
+export const getAllGenres = () => (dispatch) =>{
+    ContentUtil.fetchAllGenres().then((genres) => dispatch(receiveAllGenres(genres)))
+}
 
 export const getEpisode = (id) => (dispatch) => (
     ContentUtil.fetchEpisode(id).then((episode)=>dispatch(receiveEpisode(episode)))
