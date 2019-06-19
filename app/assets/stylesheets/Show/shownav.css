@@ -113,6 +113,34 @@
     cursor: pointer;
 }
 
+.genrebox{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 75px;
+    left: -8vw;
+    width: 90vw;
+    height: 300px;
+    background-color: white;
+    color: black;
+    padding: 20%;
+}
+
+
+.genrelist{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 4%;
+    font-size: 
+}
+
+.genreleft{
+    width: 22%;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, .2)
+}
+
 .navlefttext2{
     width: 75px;
     position: relative;

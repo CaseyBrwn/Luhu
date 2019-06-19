@@ -7,6 +7,7 @@ export const RECEIVE_ALL_EPISODES = "RECEIVE_EPISODES";
 export const RECEIVE_USER_SHOW = 'RECEIVE_USER_SHOW';
 export const REMOVE_USER_SHOW = "REMOVE_USER_SHOW";
 export const RECEIVE_ALL_GENRES = "RECEIVE_ALL_GENRES"
+export const RECEIVE_GENRE = "RECEIVE_GENRE";
 import * as ContentUtil from '../util/content_api_util';
 
 

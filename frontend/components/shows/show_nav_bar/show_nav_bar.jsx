@@ -91,10 +91,23 @@ class ShowNav extends React.Component {
             nameDropDown = <ul className="dropDown"><li className="showlogout" onClick={this.props.logoutUser} >Log Out</li></ul>
         }
         let genresList = null;
-         if(this.state.hoverBrowse)
-            genresList = this.props.genres.map((genres) => {
-            return <div id={genres.id}>{genres.genres_type}</div>
-        })
+        let genresitems = null;
+ 
+         if(this.state.hoverBrowse){
+             genresitems = (
+                 this.props.genres.map((genre) => {
+                     return (<div key={genre.id} onClick={() => this.handleClickBrowse(genre.id)}>{genre.genre_type}</div>)
+                 })
+             )
+            genresList = (
+                <div className="genrebox">
+                    <div className="genreleft"></div>
+                    <div className="genrelist">
+                         {genresitems}
+                    </div>
+                </div>
+            )
+         }
 
       
         return (
@@ -108,7 +121,8 @@ class ShowNav extends React.Component {
                                 <i className="material-icons">reorder</i>
                             </div>
                             <div className="navlefttext" >BROWSE</div>
-                            {genresList}
+                           {genresList}
+                            
                             
                         </li>
                         <li onClick={this.mystuffclick} className={this.state.navcontainerli}>
