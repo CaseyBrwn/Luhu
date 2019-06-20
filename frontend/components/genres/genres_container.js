@@ -7,13 +7,17 @@ import {getGenre} from "../../actions/content_actions";
 const msp = (state, ownProps) => {
     let genreId = ownProps.match.params.genreId
     let genre = state.entities.genres[genreId]
-
-    let shows = null;
-    if (genre) {
-        shows = genre.show_ids.map((ids) => {
-            return (state.entities.shows[ids]);
+  
+    let shows = [];
+   
+    if (genre && genre.show_ids.length > 0 && Object.keys(state.entities.shows).length>0) {
+      
+        shows = genre.show_ids.map((id) => {
+          
+            return (state.entities.shows[id]);
         });
     }
+
     return({
         genre: genre,
         shows: shows

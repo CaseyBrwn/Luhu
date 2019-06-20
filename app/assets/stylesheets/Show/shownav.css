@@ -113,7 +113,7 @@
     cursor: pointer;
 }
 
-.genrebox{
+/* .genrebox{
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -124,7 +124,7 @@
     background-color: white;
     color: black;
     padding: 20%;
-}
+} */
 
 .genrebox{
     display: flex;

@@ -62,7 +62,8 @@ const receiveGenre = (genre) => ({
 })
 
 export const getGenre = (id) => (dispatch) => {
-    ContentUtil.fetchGenre().then((res) => {
+    ContentUtil.fetchGenre(id).then((res) => {
+
         dispatch(receiveGenre(res.genre));
         dispatch(receiveAllShows(res.shows))
     })

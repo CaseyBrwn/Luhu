@@ -6,7 +6,7 @@ import {getAllGenres} from "../../../actions/content_actions";
 
 const mapStateToProps = (state, ownProps) => {
     let showpage = true;
-    if (ownProps.history.location.pathname.includes("my-stuff")){
+    if (ownProps.history.location.pathname.includes("my-stuff") || (ownProps.history.location.pathname.includes("genres"))){
         showpage = false
     }
     let genres = Object.values(state.entities.genres) || []

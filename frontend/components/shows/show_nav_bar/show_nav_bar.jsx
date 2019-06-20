@@ -61,6 +61,10 @@ class ShowNav extends React.Component {
 
     handleClickBrowse(id){
         this.props.history.push(`/genres/${id}`)
+        this.setState({ browseChange: "genrebox" })
+        setTimeout(() => {
+            this.setState({ hoverBrowse: false })
+        }, 450);
     }
 
     handlehomeclick(){
@@ -91,7 +95,10 @@ class ShowNav extends React.Component {
     }
 
     onMouseLeaveBrowseHandler() {
-        this.setState({ hoverBrowse: false, browseChange: "genrebox"})
+        this.setState({browseChange: "genrebox"})
+        setTimeout(() => {
+            this.setState({ hoverBrowse: false })
+        }, 450);
     }
 
     render() {

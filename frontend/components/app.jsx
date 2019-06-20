@@ -20,9 +20,9 @@ const App = () => (
         <RestrictRoute exact path="/shows/:showId" component={ShowShowPageContainer} />
         <RestrictRoute exact path="/movies/:movieId" component={MovieShowContainer} />
         <Route  path="/" component={ShowNavBar} />
-        <Route path="/" component={ShowsIndexContainer}/>
-        <Route path="/my-stuff" component={mystuff} />
-        <Route path="/genres/:genreId" component={genresContainer} />
+        <Route exact path="/" component={ShowsIndexContainer}/>
+        <Route exact path="/my-stuff" component={mystuff} />
+        <Route exact path="/genres/:genreId" component={genresContainer} />
         <AuthRoute exact path="/splash/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/splash/login" component={LoginFormContainer} />
         <AuthRoute exact path="/splash/signup" component={SignupFormContainer} />

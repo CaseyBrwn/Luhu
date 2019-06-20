@@ -41,8 +41,11 @@ class Modal extends React.Component{
 
         let modalbackground = "modal-background";
 
-        if(Array.isArray(this.props.modal)){
+        if(Array.isArray(this.props.modal) && this.props.modal[0] === "show"){
             return <Videoplayer content={this.props.modal} />
+        } else if (Array.isArray(this.props.modal) && this.props.modal[0] === "showpage"){
+            return <>
+        }
         }else{
             component;
             switch(this.props.modal) {
