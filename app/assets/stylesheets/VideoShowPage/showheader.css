@@ -169,7 +169,12 @@
     
     
 }
-
+/* 
+.showheaderMyStuff{
+    position: relative;
+    /* left: -10%;
+    top: -5%; */
+} */
 
 .otherinfobox{
    position: relative;
@@ -255,8 +260,8 @@
    display: flex;
    width: 100%;
    overflow: visible;
-
 }
+
 
 .showshowplay{
     position: relative;
@@ -265,7 +270,15 @@
 
 .topheader_nav li{
    margin: 2px;
-   height: 100%;
+
    align-self: center;
    text-align: center;
+}
+
+.turtle{
+    position: absolute;
+    z-index: 5;
+    left: 600px;
+    top: 400px;
+
 }

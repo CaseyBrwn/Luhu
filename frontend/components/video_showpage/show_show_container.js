@@ -2,13 +2,14 @@ import { connect } from "react-redux";
 import VideoShowPage from './video_show_page';
 import {withRouter} from 'react-router-dom';
 import {getShow, getEpisode} from "../../actions/content_actions";
+import {closeModal2} from "../../actions/modal_actions";
 
 
 
 
 const msp = (state, ownProps) => {
 
-    let showid = ownProps.match.params.showId;
+    let showid = ownProps.info[1]
     let show = state.entities.shows[showid];
     let episodes = null;
     if(show){
@@ -29,7 +30,8 @@ const mdp = (dispatch) => {
 
     return ({
         getEpisode: (id) => dispatch(getEpisode(id)),
-        getShow: (id) => dispatch(getShow(id))
+        getShow: (id) => dispatch(getShow(id)),
+        closeModal2: () => dispatch(closeModal2())
     });
 
 };

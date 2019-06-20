@@ -17,8 +17,8 @@ class VideoShowPage extends React.Component {
 
     componentDidMount(){
         
-
-       let id = this.props.match.params.showId;
+      
+       let id = this.props.info[1]
         this.props.getShow(id).then(() => this.setState({ mounted: true }));
     }
 
@@ -33,7 +33,7 @@ class VideoShowPage extends React.Component {
     }
 
     handleexit(){
-        this.props.history.push("/");
+        this.props.closeModal2();
     }
 
 

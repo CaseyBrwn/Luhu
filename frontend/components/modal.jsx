@@ -7,6 +7,7 @@ import Videoplayer from './VideoPlayer/video_player_container';
 
 
 
+
 class Modal extends React.Component{
     constructor(props){
         super(props);
@@ -16,11 +17,6 @@ class Modal extends React.Component{
     }
 
  
-    componentDidMount(){
- 
-    
-
-    }
 
     componentDidUpdate(){
 
@@ -43,9 +39,6 @@ class Modal extends React.Component{
 
         if(Array.isArray(this.props.modal) && this.props.modal[0] === "show"){
             return <Videoplayer content={this.props.modal} />
-        } else if (Array.isArray(this.props.modal) && this.props.modal[0] === "showpage"){
-            return <>
-        }
         }else{
             component;
             switch(this.props.modal) {

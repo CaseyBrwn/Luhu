@@ -1,5 +1,6 @@
 import React from 'react';
 import LargePlayButton from '../shows/buttons/large_play_button';
+import MyStuffButton from "../shows/buttons/mystuff_button";
 
 
 class ShowShow extends React.Component {
@@ -22,7 +23,10 @@ class ShowShow extends React.Component {
                
 
                 <div className="header_image_container">
+               
                     <div className="midcontainer">
+                    <div className="turtle"> <MyStuffButton content={this.props.content} /></div>
+                   
                         <div className="headersubcontainer">
                             <img className="headerimage" src={this.props.content.square_photoUrl} />
                                 {/* place holder until add square or side picture */}
@@ -35,11 +39,14 @@ class ShowShow extends React.Component {
                         <div className="showheadertitle">{this.props.content.title}</div>
                         <div className="showheaderclose">X</div>
                     </div>  */}
+                
                     <div className="headerinfoandpic">
                         <div className="tallphotoheaderbox">
                             <img className="tallphotoheader" src={this.props.content.tall_photoUrl} alt=""/>
                         </div>
+                    
                         <div className="otherinfobox">
+                      
                             <div className="Flexflexflex">
                                 <ul className='topheader'>
                                     <li>
@@ -60,8 +67,11 @@ class ShowShow extends React.Component {
                                             <li>
                                                 <div className="startWatch">START WATCHING</div>
                                             </li>
-                                            <li className="material-icons tn-3">add</li>
+                                        
+                                           
+                                            
                                         </ul>
+                                    
                                     </li>
                                 </ul>
                             </div>

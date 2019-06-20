@@ -1,5 +1,7 @@
 import React from "react";
 import {withRouter} from 'react-router-dom';
+import {connect} from "react-redux";
+import {openModal2} from "../../../actions/modal_actions"
 
 class DetailsButtons extends React.Component{
     constructor(props) {
@@ -20,14 +22,10 @@ class DetailsButtons extends React.Component{
         this.setState({detailhover: false});
     }   
     onClickHandler(){
+       
+        let info = ["showpage", this.props.content.id];
+        this.props.openModal2(info);
      
-        let type = "movies";
-        if(this.props.content.episode_ids.length > 0){
-            type = "shows";
-        }
-
-        let route = `/${type}/${this.props.content.id}`;
-        this.props.history.push(route);
     }
  
     render(){
@@ -68,6 +66,14 @@ class DetailsButtons extends React.Component{
 
 }
 
+const mdp = (dispatch) => {
+
+    return ({
+        openModal2: (modal) => dispatch(openModal2(modal))
+
+    })
 
 
-export default DetailsButtons = withRouter(DetailsButtons);
+}
+
+export default DetailsButtons = withRouter(connect(null, mdp)(DetailsButtons));
