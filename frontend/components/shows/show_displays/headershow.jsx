@@ -18,7 +18,7 @@ class HeaderShow extends React.Component{
         return(
 
             <div className="show_image_container">
-                <img className="showimage" src="https://www.perfect-fit.co.uk/media/10938/cat_m3_cat_outside_1.jpg?crop=0,0.34355555555555556,0,0&cropmode=percentage&width=1600&height=700&rnd=131527152160000000" />
+                <img className="showimage" src="https://c4.wallpaperflare.com/wallpaper/470/455/703/cat-jump-butterfly-grass-wallpaper-b79fc2742f35ffaa4fa28401f16147d5.jpg" />
                 <ul className='topshow'>
                     <li>
                         <h2>WATCH THE LUHU ORIGINAL SHOW</h2>

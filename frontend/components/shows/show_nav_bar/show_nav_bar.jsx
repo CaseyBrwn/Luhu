@@ -22,6 +22,7 @@ class ShowNav extends React.Component {
         this.onMouseEnterBrowseHandler = this.onMouseEnterBrowseHandler.bind(this);
         this.onMouseLeaveBrowseHandler = this.onMouseLeaveBrowseHandler.bind(this);
         this.handleClickBrowse = this.handleClickBrowse.bind(this);
+        this.onClickSearchHandler = this.onClickSearchHandler.bind(this);
     }
 
 
@@ -57,6 +58,10 @@ class ShowNav extends React.Component {
                             navcontainerli: 'navcontainerli2'
                             });
         }
+    }
+
+    onClickSearchHandler(){
+        this.props.history.push("/search")
     }
 
     handleClickBrowse(id){
@@ -156,7 +161,7 @@ class ShowNav extends React.Component {
                         </li>
                     </ul>
                     <ul className="showclick">
-                        <li className="searchNav">
+                        <li onClick={this.onClickSearchHandler} className="searchNav">
                             <i className="material-icons md-19">search</i>
                             <div className="textSearch">SEARCH</div>
                         </li>

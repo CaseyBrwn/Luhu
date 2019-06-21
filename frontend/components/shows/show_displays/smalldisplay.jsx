@@ -102,12 +102,12 @@ class SmallDisplay extends React.Component {
                             </div>
                         </div>
                         <div className="smalldisplaycontent">
-                            <ul className="smalldisplayUL">
+                            <div className="smalldisplayUL">
                                 {smallcontent}
-                                <li className="episodeTitle">{this.props.content.title}</li>
-                                <li className={episodeDescription}>{this.props.content.description}</li>
-                                <li>{buttons}</li>
-                            </ul>
+                                <div className="episodeTitle">{this.props.content.title}</div>
+                                <div className={episodeDescription}>{this.props.content.description}</div>
+                                <div>{buttons}</div>
+                            </div>
                             
                           
                         </div>

@@ -5,7 +5,7 @@ import {closeModal, openModal} from "../../../actions/modal_actions";
 
 
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
 
     let errors = state.errors.session;
 

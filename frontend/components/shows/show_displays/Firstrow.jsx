@@ -116,8 +116,8 @@ class FirstRowShow extends React.Component{
             firstrowtitle = "firstrowtitle2";
             description = "firstrowdescription2";
             footer = <div className="bottombuttons">
-                <li><DetailsButton color="white" content={this.props.show}/></li>
-                <li><MyStuffButton color="white" content={this.props.show} /></li>
+                <div><DetailsButton color="white" content={this.props.show}/></div>
+                <div><MyStuffButton color="white" content={this.props.show} /></div>
             </div>
         }
    
@@ -133,12 +133,12 @@ class FirstRowShow extends React.Component{
                 </div>
 
                 <div className="firstinfocontainer">
-                    <ul className="firstinfo">
+                    <div className="firstinfo">
                         <div className={firstrowtitle}>
-                            <li>{this.props.show.title}</li>
-                            <li className={description}>{this.props.show.description}</li>
+                            <div>{this.props.show.title}</div>
+                            <div className={description}>{this.props.show.description}</div>
                         </div>
-                    </ul>
+                    </div>
                 </div>
                 {footer}
                

@@ -11,10 +11,14 @@ const msp = (state, ownProps) => {
     let shows = [];
    
     if (genre && genre.show_ids.length > 0 && Object.keys(state.entities.shows).length>0) {
-      
-        shows = genre.show_ids.map((id) => {
-          
-            return (state.entities.shows[id]);
+    
+        genre.show_ids.forEach((id) => {
+            if (state.entities.shows[id] === undefined){
+
+            }else{
+                shows.push(state.entities.shows[id]);
+            }
+            
         });
     }
 
