@@ -21,6 +21,15 @@ export const fetchEpisode = (id) => (
     })
 );
 
+export const fetchAllEpisodes = () =>{ 
+ 
+    return (
+            $.ajax({
+                method: "GET",
+                url: `api/episodes`
+            })
+)};
+
 export const fetchAllMovies = () => (
     $.ajax({
         method: "GET",

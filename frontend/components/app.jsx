@@ -23,9 +23,9 @@ const App = () => (
         <RestrictRoute exact path="/movies/:movieId" component={MovieShowContainer} />
         <Route  path="/" component={ShowNavBar} />
         <Route exact path="/" component={ShowsIndexContainer}/>
-        <Route exact path="/my-stuff" component={mystuff} />
-        <Route exact path="/search" component={Search} />
-        <Route exact path="/genres/:genreId" component={genresContainer} />
+        <RestrictRoute exact path="/my-stuff" component={mystuff} />
+        <RestrictRoute exact path="/search" component={Search} />
+        <RestrictRoute exact path="/genres/:genreId" component={genresContainer} />
         <AuthRoute exact path="/splash/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/splash/login" component={LoginFormContainer} />
         <AuthRoute exact path="/splash/signup" component={SignupFormContainer} />

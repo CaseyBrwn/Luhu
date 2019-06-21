@@ -3,7 +3,7 @@ export const RECEIVE_SHOW = "RECEIVE_SHOW";
 export const RECEIVE_ALL_MOVIES = "RECEIVE_ALL_MOVIES";
 export const RECEIVE_MOVIE = "RECEIVE_MOVIE";
 export const RECEIVE_EPISODE = "RECEIVE_EPISODE";
-export const RECEIVE_ALL_EPISODES = "RECEIVE_EPISODES";
+export const RECEIVE_ALL_EPISODES = "RECEIVE_ALL_EPISODES";
 export const RECEIVE_USER_SHOW = 'RECEIVE_USER_SHOW';
 export const REMOVE_USER_SHOW = "REMOVE_USER_SHOW";
 export const RECEIVE_ALL_GENRES = "RECEIVE_ALL_GENRES"
@@ -21,15 +21,19 @@ const receiveAllMovies = (movies) => ({
     movies: movies
 });
 
-const receiveAllEpisodes = (episodes) => ({
+const receiveAllEpisodes = (episodes) => {
+
+    return({
     type: RECEIVE_ALL_EPISODES,
     episodes: episodes
-});
+    })
+};
 
 const receiveEpisode = (episode) => ({
     type: RECEIVE_EPISODE,
     episode: episode
 });
+ 
 
 const receiveShow = (show) => ({
     type: RECEIVE_SHOW,
@@ -61,6 +65,7 @@ const receiveGenre = (genre) => ({
     genre: genre
 })
 
+
 export const getGenre = (id) => (dispatch) => {
     ContentUtil.fetchGenre(id).then((res) => {
 
@@ -76,6 +81,12 @@ export const getAllGenres = () => (dispatch) =>{
 export const getEpisode = (id) => (dispatch) => (
     ContentUtil.fetchEpisode(id).then((episode)=>dispatch(receiveEpisode(episode)))
 );
+
+export const getAllEpisodes = () => (dispatch) => {
+
+    return(
+    ContentUtil.fetchAllEpisodes().then((episodes) => dispatch(receiveAllEpisodes(episodes)))
+)};
 
 export const getAllShows = () => (dispatch) => (
     ContentUtil.fetchAllShows().then((shows)=>dispatch(receiveAllShows(shows)))
