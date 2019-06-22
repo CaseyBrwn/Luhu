@@ -41,27 +41,39 @@ class Search extends React.Component{
         let currentShows = this.props.shows;
         let currentEpisodes = this.props.episodes;
 
-        let searchedShows =
-            this.props.shows.filter(show => {
-              
-                for (let i = 0; i < search.length && i < show.title.length; i++) {
-                    if (search[i].toLowerCase() !== show.title[i].toLowerCase()) {
+        let searchedShows = []
+            this.props.shows.forEach(show => {
+                let showTitle = show.title.split(' ')
+                let searchterm = showTitle.filter(word => { 
+                    for (let i = 0; i < search.length && i < word.length; i++) {
+                        if (search[i].toLowerCase() !== word[i].toLowerCase()) {
+                            return false
+                        }
+                    }
+                    return true
+                })
+                if (searchterm.length > 0){
+                    searchedShows.push(show)
+                }
+            })
+
+        let searchedEpisodes = []
+            this.props.episodes.forEach(episode => {
+                
+                let episodeTitle = episode.title.split(" ");
+                let searchTerm2 = episodeTitle.filter((word) => {
+                for (let i = 0; i < search.length && i < word.length; i++) {
+                    if (search[i].toLowerCase() !== word[i].toLowerCase()) {
                         return false
                     }
                 }
                 return true
             })
-
-        let searchedEpisodes =
-            this.props.episodes.filter(episode => {
-
-                for (let i = 0; i < search.length && i < episode.title.length; i++) {
-                    if (search[i].toLowerCase() !== episode.title[i].toLowerCase()) {
-                        return false
-                    }
+                if (searchTerm2.length > 0) {
+               
+                    searchedEpisodes.push(episode)
                 }
-                return true
-            })
+        })
 
         if(this.state.submit){
             currentShows = searchedShows
