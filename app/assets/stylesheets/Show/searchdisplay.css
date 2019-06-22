@@ -1,0 +1,56 @@
+.searchedShowContainer{
+    position: relative;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(0, 0, 0, .2)
+}
+
+.searchedShowContainer:hover{
+    background-color: #ebedf2;
+}
+
+.imageTitleContainer{
+    height: 80%;
+    display: flex;
+    /* margin-left: 20px; */
+    align-items: center;
+
+}
+
+.searchImageContainer{
+    height: 100%;
+    width: 30%;
+}
+
+.searchImage{
+    width: 154px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.titleContainer{
+    position: absolute;
+    top: 45%;
+    left: 175px;
+    display: flex;
+    margin-left: 10px;
+}
+
+.leftTitle{
+font-size: 20px;
+color: black;
+white-space: pre;
+}
+
+.rightTitle{
+font-size: 20px;
+white-space: pre;
+color: rgb(0, 0, 0, .2)
+}
+
+.searchSeries{
+    padding: 20px;
+}

@@ -23,6 +23,8 @@ class SmallDisplay extends React.Component {
 
 
     playvideo(){
+        
+
 
         if (this.props.content.show_id) {
             let info = ["show", this.props.content.id];
@@ -78,12 +80,11 @@ class SmallDisplay extends React.Component {
 
         if (this.props.content.show_id) {
              smallcontent = 
-                <li className="episodeNumber">EPISODE {this.props.content.episode_number}</li>
+                <div className="episodeNumber">EPISODE {this.props.content.episode_number}</div>
         }else {
-   
            buttons =  <div className="bottombuttonssmall">
-                <li><DetailsButton color="black" content={this.props.content} /></li>
-                <li><MyStuffButton color="black" content={this.props.content} /></li>
+                <div><DetailsButton color="black" content={this.props.content} /></div>
+                <div><MyStuffButton color="black" content={this.props.content} /></div>
             </div>
         }
       
@@ -108,8 +109,7 @@ class SmallDisplay extends React.Component {
                                 <div className={episodeDescription}>{this.props.content.description}</div>
                                 <div>{buttons}</div>
                             </div>
-                            
-                          
+           
                         </div>
 
                     </div>
