@@ -19,6 +19,11 @@ class SearchDisplay extends React.Component{
         }
     }
 
+    parseTitle(){
+
+
+    }
+
 
     render(){
         let type = "SERIES"
@@ -27,9 +32,13 @@ class SearchDisplay extends React.Component{
         }
 
 
-        let searchlength = this.props.search.length;
-        let leftTitle = this.props.content.title.slice(0, searchlength);
-        let rightTitle = this.props.content.title.slice(searchlength);
+
+        let search = this.props.search.toLowerCase();
+        let title = this.props.content.title.toLowerCase();
+        let strt = title.indexOf(search)
+        let leftTitle = this.props.content.title.slice(0, strt);
+        let midTitle = this.props.content.title.slice(strt, (strt + (this.props.search.length)));
+        let rightTitle = this.props.content.title.slice(strt + this.props.search.length);
         return(
             <div onClick={this.onClickHandler} className="searchedShowContainer">
                  <div className="imageTitleContainer">
@@ -39,6 +48,7 @@ class SearchDisplay extends React.Component{
                     
                     <div className="titleContainer">
                         <div className="leftTitle">{leftTitle}</div>
+                        <div className="midTitle">{midTitle}</div>
                         <div className="rightTitle">{rightTitle}</div>
                     </div>
                 </div>

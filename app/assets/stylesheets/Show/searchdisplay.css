@@ -39,13 +39,19 @@
     margin-left: 10px;
 }
 
-.leftTitle{
+.midTitle{
 font-size: 20px;
 color: black;
 white-space: pre;
 }
 
 .rightTitle{
+font-size: 20px;
+white-space: pre;
+color: rgb(0, 0, 0, .2)
+}
+
+.leftTitle{
 font-size: 20px;
 white-space: pre;
 color: rgb(0, 0, 0, .2)
