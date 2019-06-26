@@ -20,6 +20,7 @@ class ShowIndex extends React.Component {
         if (!this.props.currentUser.id){ 
             return null;
         }
+        this.props.getAllEpisodes();
         this.props.getAllShows().then(
             ()=> {
                 this.props.getAllMovies().then(

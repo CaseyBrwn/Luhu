@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {logoutUser} from '../../actions/session_actions';
-import {getAllShows, getAllMovies} from '../../actions/content_actions';
+import {getAllShows, getAllMovies, getAllEpisodes} from '../../actions/content_actions';
 import ShowIndex from './show_index';
 
 
@@ -22,7 +22,8 @@ const mdp = (dispatch) => {
         getAllShows: () => dispatch(getAllShows()),
         getAllMovies: () => dispatch(getAllMovies()),
         // getAllGenres: () => dispatch(getAllGenres()),
-        logoutUser: () => dispatch(logoutUser())
+        logoutUser: () => dispatch(logoutUser()),
+        getAllEpisodes: () => dispatch(getAllEpisodes())
     });
 
 };
