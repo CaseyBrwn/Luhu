@@ -189,7 +189,7 @@
     height: 60%;
 }
 
-.headerinfoandpic div{
+.headerinfoandpic > div{
     margin: 10px;
 }
 
@@ -214,28 +214,28 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.topheader li {
-   margin: 6px;
+.topheader > li {
+   margin: 10px;
    
 }
 
-.topheader h2{
+.topheader > h2{
    font-size: 13px;
 }
 
-.topheader h3{
+.topheader > h3{
    font-size:calc(30px + 1vw);
    font-weight: bold;
    padding-bottom: 12px;
 }
 
-.topheader h5{
+.topheader > h5{
    font: 400 18px system-ui;
    white-space: pre;
    
 }
 
-.topshow h4 {
+.topshow > h4 {
    font-size: 120%;
    line-height: 1.5;
    max-height: 90px;
@@ -245,10 +245,11 @@
 .topheader_nav{
     margin-top: 12px;
    position: relative;
-   left: -2%;
+   /* left: -2%; */
    display: flex;
    width: 100%;
    overflow: visible;
+  align-items: center;
 }
 
 
@@ -257,17 +258,28 @@
     top: -10px;
 }
 
-.topheader_nav li{
-   margin: 2px;
+.topheader_nav > li{
+   margin: 10px;
 
    align-self: center;
    text-align: center;
 }
 
-.turtle{
+/* .turtle{
     position: absolute;
     z-index: 5;
-    left: 600px;
-    top: 400px;
+    left: 40%;
+    top: 72%;
+    z-index: 100;
 
+} */
+
+.startWatch{
+    position: relative;
+    top: -10%;
+}
+
+.showshowplay{
+    position: relative;
+    top: 10%;
 }

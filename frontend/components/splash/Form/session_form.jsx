@@ -21,13 +21,13 @@ class SessionForm extends React.Component{
     }
 
     clickHandler(){
-        this.props.loginUser().then(() => dispatch(this.props.closeModal()));
+        this.props.loginUser().then(() => (this.props.closeModal()));
     }
 
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.processForm(this.state).then(()=>dispatch(this.props.closeModal()));
+        this.props.processForm(this.state).then(()=>(this.props.closeModal()));
     
 
     }

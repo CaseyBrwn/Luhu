@@ -25,14 +25,14 @@ class ShowShow extends React.Component {
                 <div className="header_image_container">
                
                     <div className="midcontainer">
-                    <div className="turtle"> <MyStuffButton content={this.props.content} /></div>
+                    
                    
                         <div className="headersubcontainer">
                             <img className="headerimage" src={this.props.content.square_photoUrl} />
                                 {/* place holder until add square or side picture */}
                         </div>
-                    <div className="headerbackgroundcolor">
-                        </div>
+                        <div className="headerbackgroundcolor">
+                            </div>
                         
                     </div>
                     {/* <div className="showheaderHeader">
@@ -46,8 +46,9 @@ class ShowShow extends React.Component {
                         </div>
                     
                         <div className="otherinfobox">
-                      
+                        
                             <div className="Flexflexflex">
+                           
                                 <ul className='topheader'>
                                     <li>
                                         <h3>{this.props.content.title}</h3>
@@ -66,6 +67,9 @@ class ShowShow extends React.Component {
                                             </li>
                                             <li>
                                                 <div className="startWatch">START WATCHING</div>
+                                            </li>
+                                            <li>
+                                            <div className="turtle"> <MyStuffButton content={this.props.content} /></div>
                                             </li>
                                         
                                            
