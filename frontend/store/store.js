@@ -4,7 +4,9 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
 const configreStore = (preloadedState = {}) => {
-    return createStore(rootReducer, preloadedState, applyMiddleware(thunk, logger));
+    return createStore(rootReducer, preloadedState, applyMiddleware(thunk));
 };
 
 export default configreStore;
+
+// logger

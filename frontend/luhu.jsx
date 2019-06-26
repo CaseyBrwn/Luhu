@@ -25,19 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //Test Started
-    window.Con_Actions = Con_Actions;
+    // window.Con_Actions = Con_Actions;
 
-    window.createUserShow =  Con_Actions.createUserShow;
-    window.deleteUserShow = Con_Actions.deleteUserShow;
-    window.getEpisode = Con_Actions.getEpisode;
-    window.getAllShows = Con_Actions.getAllShows;
-    window.getShow = Con_Actions.getShow;
-    window.getAllMovies = Con_Actions.getAllMovies;
-    window.getMovie = Con_Actions.getMovie;
-    window.logoutUser = logoutUser;
-    window.getState = store.getState;
-    window.dispatch = store.dispatch;
-    window.signupUser = signupUser;
+    // window.createUserShow =  Con_Actions.createUserShow;
+    // window.deleteUserShow = Con_Actions.deleteUserShow;
+    // window.getEpisode = Con_Actions.getEpisode;
+    // window.getAllShows = Con_Actions.getAllShows;
+    // window.getShow = Con_Actions.getShow;
+    // window.getAllMovies = Con_Actions.getAllMovies;
+    // window.getMovie = Con_Actions.getMovie;
+    // window.logoutUser = logoutUser;
+    // window.getState = store.getState;
+    // window.dispatch = store.dispatch;
+    // window.signupUser = signupUser;
 
     //Test Ended
 
