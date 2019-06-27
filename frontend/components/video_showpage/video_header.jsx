@@ -54,7 +54,7 @@ class ShowShow extends React.Component {
                                         <h3>{this.props.content.title}</h3>
                                     </li>
                                     <li>
-                                        <h5>2019  ·  Nature</h5>
+                                        <h5>2019</h5>
                                         {/* place holder until add year and genre to data base */}
                                     </li>
                                     <li>
