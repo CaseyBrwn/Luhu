@@ -93,7 +93,7 @@ class ShowIndex extends React.Component {
                     
                 </div>
                     {/* <div className="indexFooter"> */}
-                    <Footer />
+                    {/* <Footer /> */}
                     {/* </div> */}
                 
             </div>

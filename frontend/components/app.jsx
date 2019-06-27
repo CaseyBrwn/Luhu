@@ -20,7 +20,7 @@ const App = () => (
     <div className="maindiv">
         <Modal />
         <Modal2 />
-        <Route path = '/' component={Footer} />
+        {/* <Route path = '/' component={Footer} /> */}
         <RestrictRoute exact path="/movies/:movieId" component={MovieShowContainer} />
         <Route  path="/" component={ShowNavBar} />
         <Route exact path="/" component={ShowsIndexContainer}/>
