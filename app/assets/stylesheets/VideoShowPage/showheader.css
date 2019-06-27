@@ -261,8 +261,8 @@
 .topheader_nav > li{
    margin: 10px;
 
-   align-self: center;
-   text-align: center;
+   /* align-self: center;
+   text-align: center; */
 }
 
 /* .turtle{

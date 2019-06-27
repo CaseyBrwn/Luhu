@@ -23,6 +23,7 @@ class ShowNav extends React.Component {
         this.onMouseLeaveBrowseHandler = this.onMouseLeaveBrowseHandler.bind(this);
         this.handleClickBrowse = this.handleClickBrowse.bind(this);
         this.onClickSearchHandler = this.onClickSearchHandler.bind(this);
+        // this.onClickLogOut = this.onClickLogOut.bind(this);
     }
 
 
@@ -36,6 +37,7 @@ class ShowNav extends React.Component {
         this.props.getAllGenres();
     }
     componentDidUpdate(prevProps){
+
         if (this.props.showpage!== prevProps.showpage) this.scrollHandler();
     }
     
@@ -105,6 +107,12 @@ class ShowNav extends React.Component {
             this.setState({ hoverBrowse: false })
         }, 450);
     }
+
+    // onClickLogOut(){
+    //     this.props.logoutUser();
+    //     // this.props.history.push("/splash");
+        
+    // }
 
     render() {
         if (!this.props.currentUser.id) {

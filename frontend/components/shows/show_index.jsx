@@ -18,7 +18,7 @@ class ShowIndex extends React.Component {
     componentDidMount(){
 
         if (!this.props.currentUser.id){ 
-            return null;
+            this.props.history.push("/splash");
         }
         this.props.getAllEpisodes();
         this.props.getAllShows().then(
