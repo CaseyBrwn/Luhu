@@ -206,7 +206,7 @@ object-fit: cover;
 }
 
 .splashfooter{
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     left: 0;
     width: 100%;
@@ -217,6 +217,7 @@ object-fit: cover;
     justify-content: space-between;
     align-items: center;
     color: grey;
+    z-index: 1000;
 }
 .splashfooter > * {
     margin-left: 8%;
@@ -228,8 +229,14 @@ object-fit: cover;
     color: grey;
 }
 .githubicon{
-    width: 20%;
-    height: 20%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.personalSite{
+    width: 50px;
+    height: 50px;
     cursor: pointer;
 }
 

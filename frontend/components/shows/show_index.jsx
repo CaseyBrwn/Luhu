@@ -2,6 +2,7 @@ import React from 'react';
 import FirstRowShow from './show_displays/Firstrow';
 import HeaderShow from './show_displays/headershow';
 import SecondRow from './show_displays/scondrow_container';
+import Footer from '../footer';
 
 
 class ShowIndex extends React.Component {
@@ -72,7 +73,7 @@ class ShowIndex extends React.Component {
     
         
         return(
-
+            <>
             <div className='indexbackground'>
                 <div className="splash">
                     {header}
@@ -91,8 +92,13 @@ class ShowIndex extends React.Component {
                      </ul>
                     
                 </div>
-
+                    {/* <div className="indexFooter"> */}
+                    <Footer />
+                    {/* </div> */}
+                
             </div>
+             
+            </>
         );
     }
 

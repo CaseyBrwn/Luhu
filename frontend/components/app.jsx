@@ -14,12 +14,13 @@ import {Route} from 'react-router-dom';
 import mystuff from './my_stuff/my_stuff_container'; 
 import genresContainer from './genres/genres_container';
 import Search from './search/search_container';
-
+import Footer from './footer';
 
 const App = () => (
     <div className="maindiv">
         <Modal />
         <Modal2 />
+        <Route path = '/' component={Footer} />
         <RestrictRoute exact path="/movies/:movieId" component={MovieShowContainer} />
         <Route  path="/" component={ShowNavBar} />
         <Route exact path="/" component={ShowsIndexContainer}/>

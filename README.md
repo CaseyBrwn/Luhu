@@ -24,7 +24,7 @@ Luhu is a clone of the popular show streaming service [Hulu](https://www.hulu.co
  
 #### Users Auth
    * Users can create and sign in with a unique username and password
-   * Password is protected via a hashing algorythm
+   * Password is protected via a Bcrypt hashing    algorythm
    * Use of the main site is protected via a user auth patern
  
 #### Main Page 
@@ -38,7 +38,7 @@ Luhu is a clone of the popular show streaming service [Hulu](https://www.hulu.co
  #### Additional Features
    * Show and Episode Search by Title 
    * Browse by Genere 
-   * MyStuff users can add and remove episodes     from their My Stuff page
+   * MyStuff users can add and remove episodes from their My Stuff page
  
  
    
