@@ -23,7 +23,7 @@ class ShowNav extends React.Component {
         this.onMouseLeaveBrowseHandler = this.onMouseLeaveBrowseHandler.bind(this);
         this.handleClickBrowse = this.handleClickBrowse.bind(this);
         this.onClickSearchHandler = this.onClickSearchHandler.bind(this);
-        // this.onClickLogOut = this.onClickLogOut.bind(this);
+        this.onClickLogOut = this.onClickLogOut.bind(this);
     }
 
 
@@ -37,7 +37,7 @@ class ShowNav extends React.Component {
         this.props.getAllGenres();
     }
     componentDidUpdate(prevProps){
-
+        
         if (this.props.showpage!== prevProps.showpage) this.scrollHandler();
     }
     
@@ -45,6 +45,7 @@ class ShowNav extends React.Component {
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.scrollHandler);
+        this.setState
     }
 
     scrollHandler() {
@@ -108,11 +109,11 @@ class ShowNav extends React.Component {
         }, 450);
     }
 
-    // onClickLogOut(){
-    //     this.props.logoutUser();
-    //     // this.props.history.push("/splash");
-        
-    // }
+    onClickLogOut(){
+        this.setState({hoverName: false})
+        this.props.logoutUser();
+
+    }
 
     render() {
         if (!this.props.currentUser.id) {
@@ -121,7 +122,7 @@ class ShowNav extends React.Component {
         let nameletter = this.props.currentUser.username[0].toUpperCase();
         let nameDropDown = null;
         if(this.state.hoverName){
-            nameDropDown = <ul className="dropDown"><li className="showlogout" onClick={this.props.logoutUser} >Log Out</li></ul>
+            nameDropDown = <ul className="dropDown"><li className="showlogout" onClick={this.onClickLogOut} >Log Out</li></ul>
         }
         let genresList = null;
         let genresitems = null;

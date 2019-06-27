@@ -20,20 +20,20 @@ class Modal extends React.Component{
 
     componentDidUpdate(){
 
-
-        if (this.state.mounted === false) {
+      
+        if (this.state.mounted === false && this.props.modal !== null) {
             setTimeout(() => {
                 this.setState({ mounted: true });
             }, 200);
+        }
+
+        if(this.props.modal === null && this.state.mounted !== false){
+            this.setState({mounted: false})
         }
     }
 
     render() {
         let component = null;
-        if(!this.props.modal && this.state.mounted){
-            this.setState({ mounted: false });
-            return null;
-        }
 
         let modalbackground = "modal-background";
 

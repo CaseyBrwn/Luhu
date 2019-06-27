@@ -36,7 +36,8 @@ export const logoutUser = () => (dispatch) => {
 };
 
 export const signupUser = (user) => dispatch => {
-    return signup(user).then(response => dispatch(receiveCurrentUser(response)), promise =>
-        dispatch(receiveErrors(promise.responseJSON)));
+   
+    return (signup(user).then(response => dispatch(receiveCurrentUser(response)), promise =>
+        dispatch(receiveErrors(promise.responseJSON))));
 };
 

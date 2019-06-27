@@ -8,7 +8,6 @@ class ShowIndex extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            didmount: false,
             left: true 
         };
         this.handleClick = this.handleClick.bind(this);
@@ -16,31 +15,19 @@ class ShowIndex extends React.Component {
     }
 
     componentDidMount(){
-
-        if (!this.props.currentUser.id){ 
-            this.props.history.push("/splash");
-        }
+        // this.props.closeModal()
+     
         this.props.getAllEpisodes();
-        this.props.getAllShows().then(
-            ()=> {
-                this.props.getAllMovies().then(
-                    ()=> this.setState({ didmount: true }) 
-                );
-            }
-        );
+        this.props.getAllShows();
+        
     }
 
     componentDidUpdate(prevProps){
-
-        if (prevProps.currentUser.id !== this.props.currentUser.id) {
-            this.props.getAllShows().then(
-                () => {
-                    this.props.getAllMovies().then(
-                        () => this.setState({ didmount: true })
-                    );
-                }
-            );
+        if (!this.props.currentUser.id) {
+            this.props.history.push("/splash");
         }
+     
+
     }
 
     
@@ -57,15 +44,13 @@ class ShowIndex extends React.Component {
 
     render() {
 
-        if (!this.props.currentUser.id) {
-            return null
-        }
+      
         let shows = this.props.shows;
         let show4 = this.props.shows[3];
 
 
         let header = null;
-        if(this.state.didmount){
+        if(shows.length > 0){
            
             header = <HeaderShow show={show4} />
         }

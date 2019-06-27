@@ -1,10 +1,11 @@
 class Api::UsersController < ApplicationController
 
     def create
+        
         @user = User.create(user_params)
+        debugger
         if @user.save
             login(@user)
-            @user.includes(:shows)
             render :show
         else
            
