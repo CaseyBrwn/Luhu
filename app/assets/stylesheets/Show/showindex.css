@@ -3,12 +3,12 @@
 .splash{
    min-width: 1200px;
    position: absolute;
-   background-color: grey;
+   background-color: rgb(219, 218, 218);
 
 }
 
 .indexbackground{
-   height: 200%;
+   height: 240%;
    width: 100%;
    background-color: rgb(238, 237, 237);
 }
