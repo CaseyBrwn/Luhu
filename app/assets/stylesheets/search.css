@@ -59,7 +59,7 @@
 
 .searchShowscontainer{
     position: absolute;
-    top: 25%;
+    top: 200px;
     left: 5%;
     width: 90%;
      flex-wrap: wrap;
@@ -89,7 +89,7 @@
 
 .searchEpisodescontainer{
      position: absolute;
-    top: 55%;
+    top: 500px;
     left: 5%;
     width: 90%;
 }

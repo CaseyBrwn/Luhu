@@ -75,8 +75,7 @@ class Modal extends React.Component{
 
 
 
-const mapStateToProps = (state) => {
-
+const mapStateToProps = (state, ownProps) => {
     return ({
         modal: state.ui.modal
     });

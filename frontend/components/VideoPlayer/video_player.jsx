@@ -17,16 +17,18 @@ class VideoPlayer extends React.Component{
     }
 
     componentDidMount(){
-        
         this.props.getEpisode(this.props.videoId);
         this.vid = document.getElementById("my_video");
         this.progressbar = document.getElementById("progressbar");
         this.currenttime = document.getElementById("currenttime");
         this.fulltime = document.getElementById("fulltime");
- 
     }
 
+
     componentDidUpdate(prevProps){
+        if((prevProps.location.pathname !== this.props.history.location.pathname  && !this.state.browse)){
+            this.props.closeModal()
+        }
         this.vid = document.getElementById("my_video");
 
         if(prevProps.videoId !== this.props.videoId){

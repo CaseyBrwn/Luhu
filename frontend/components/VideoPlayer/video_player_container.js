@@ -28,7 +28,6 @@ const mdp = (dispatch) => {
 
 };
 
-export default connect(msp, mdp)(VideoPlayer);
 
 
-export const VideoPlayerContainer = withRouter(connect(msp, mdp)(VideoPlayer));
+export default  withRouter(connect(msp, mdp)(VideoPlayer));
